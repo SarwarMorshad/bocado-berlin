@@ -11,41 +11,26 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">BOCADO</h3>
             <p className="text-gray-300 mb-4">
-              Experience the finest culinary delights with fresh ingredients and authentic flavors. We serve
-              happiness on every plate.
+              Genießen Sie die feinsten kulinarischen Köstlichkeiten mit frischen Zutaten und authentischen
+              Aromen. Wir servieren Glück auf jedem Teller.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61580057680833"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
               >
                 <FaFacebookF className="h-5 w-5" />
               </a>
+
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
-              >
-                <FaTwitter className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bocado.berlin?igsh=emZlN2cxcDYwY244"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
               >
                 <FaInstagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
-              >
-                <FaYoutube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -56,7 +41,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200">
-                  Home
+                  Startseite
                 </Link>
               </li>
               <li>
@@ -64,43 +49,41 @@ const Footer = () => {
                   to="/menu"
                   className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
                 >
-                  Menu
+                  Menü
                 </Link>
               </li>
               <li>
                 <Link
                   to="/about"
                   className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
-                >
-                  About Us
-                </Link>
+                ></Link>
               </li>
               <li>
                 <Link
                   to="/contact"
                   className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
                 >
-                  Contact
+                  Kontakt
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/cart"
                   className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
                 >
-                  Cart
+                  Warenkorb
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-4">Kontaktieren Sie uns</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MdLocationOn className="h-5 w-5 text-[#feaa3f] mt-1 flex-shrink-0" />
-                <span className="text-gray-300">1Am Dachsbau 12, 13503 Berlin</span>
+                <span className="text-gray-300">Am Dachsbau 12, 13503 Berlin</span>
               </li>
               <li className="flex items-center space-x-3">
                 <MdPhone className="h-5 w-5 text-[#feaa3f] flex-shrink-0" />
@@ -126,7 +109,9 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-300 mb-4">Subscribe to get special offers and updates.</p>
+            <p className="text-gray-300 mb-4">
+              Abonnieren Sie, um exklusive Angebote und Neuigkeiten zu erhalten.
+            </p>
             <form className="space-y-2">
               <input
                 type="email"

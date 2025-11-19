@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+// import logo from "../assets/bocado.jpg"; // Adjust the path as necessary
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="text-3xl font-bold tracking-wider">
+          <Link to="/" className="text-3xl text-primary font-bold tracking-wider">
             BOCADO
           </Link>
 
@@ -41,7 +42,7 @@ const Navbar = () => {
             ))}
 
             {/* Cart Icon */}
-            <Link
+            {/* <Link
               to="/cart"
               className="relative text-white hover:text-[#feaa3f] transition-colors duration-200"
             >
@@ -62,10 +63,10 @@ const Navbar = () => {
               <span className="absolute -top-2 -right-2 bg-[#ef4444] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 0
               </span>
-            </Link>
+            </Link> */}
 
             {/* Login/Register Buttons */}
-            <Link
+            {/* <Link
               to="/login"
               className="text-base font-medium text-white hover:text-[#feaa3f] transition-colors duration-200"
             >
@@ -76,7 +77,7 @@ const Navbar = () => {
               className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-medium transition-colors duration-200"
             >
               Register
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -122,7 +123,7 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
-            <Link
+            {/* <Link
               to="/cart"
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#0f3a36] hover:text-[#feaa3f]"
@@ -142,7 +143,7 @@ const Navbar = () => {
               className="block mx-3 mt-4 bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-medium text-center transition-colors duration-200"
             >
               Register
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}

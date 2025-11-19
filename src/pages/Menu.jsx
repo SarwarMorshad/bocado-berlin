@@ -6,7 +6,7 @@ const Menu = () => {
 
   const menuData = {
     tapasFrias: {
-      title: "Tapas Frías - Cold Tapas",
+      title: "Tapas Frías - Kalte Tapas",
       items: [
         {
           id: "01",
@@ -53,7 +53,7 @@ const Menu = () => {
       ],
     },
     tapasCalientes: {
-      title: "Tapas Calientes - Warm Tapas",
+      title: "Tapas Calientes - Warme Tapas",
       items: [
         {
           id: "30",
@@ -100,7 +100,7 @@ const Menu = () => {
       ],
     },
     sopas: {
-      title: "Sopas - Soups",
+      title: "Sopas - Souppen",
       items: [
         {
           id: "51",
@@ -111,7 +111,7 @@ const Menu = () => {
       ],
     },
     ensaladas: {
-      title: "Ensalada - Salads",
+      title: "Ensalada - Salate",
       items: [
         {
           id: "55",
@@ -147,7 +147,7 @@ const Menu = () => {
       ],
     },
     especialidades: {
-      title: "Especialidades - Specialties",
+      title: "Especialidades - Speczialitäten",
       items: [
         {
           id: "70",
@@ -199,7 +199,7 @@ const Menu = () => {
       ],
     },
     kids: {
-      title: "Para niños - For Kids",
+      title: "Para niños - Für Kinder",
       items: [
         {
           id: "100",
@@ -210,7 +210,7 @@ const Menu = () => {
       ],
     },
     postres: {
-      title: "Postres - Desserts",
+      title: "Postres - Nachspeisen",
       items: [
         {
           id: "110",
@@ -229,21 +229,21 @@ const Menu = () => {
   };
 
   const categories = [
-    { id: "all", name: "All" },
-    { id: "tapasFrias", name: "Cold Tapas" },
-    { id: "tapasCalientes", name: "Warm Tapas" },
-    { id: "sopas", name: "Soups" },
-    { id: "ensaladas", name: "Salads" },
+    { id: "all", name: "Alles" },
+    { id: "tapasFrias", name: "Kalte Tapas" },
+    { id: "tapasCalientes", name: "Warme Tapas" },
+    { id: "sopas", name: "Suppen" },
+    { id: "ensaladas", name: "Salate" },
     { id: "nachos", name: "Nachos" },
-    { id: "especialidades", name: "Specialties" },
-    { id: "kids", name: "Kids Menu" },
-    { id: "postres", name: "Desserts" },
+    { id: "especialidades", name: "Spezialitäten" },
+    { id: "kids", name: "Kindermenü" },
+    { id: "postres", name: "Nachspeisen" },
   ];
 
-  const handleAddToCart = (item) => {
-    // TODO: Implement cart functionality
-    console.log("Added to cart:", item);
-  };
+  // const handleAddToCart = (item) => {
+  //   // TODO: Implement cart functionality
+  //   console.log("Added to cart:", item);
+  // };
 
   const filteredMenu = activeCategory === "all" ? Object.values(menuData) : [menuData[activeCategory]];
 
@@ -254,7 +254,7 @@ const Menu = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-4">Menú</h1>
           <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
-          <p className="text-lg mt-2 text-gray-300">Especial de gran inauguración</p>
+          <p className="text-3xl mt-2 text-primary">Especial de gran inauguración</p>
         </div>
       </div>
 
