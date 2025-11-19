@@ -8,38 +8,15 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Menu", path: "/menu" },
     { name: "About", path: "/about" },
-    // { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/contact" },
   ];
-  //    const links = (
-  //     <>
-  //       <li>
-  //         <NavLink to="/">Home</NavLink>
-  //       </li>
-  //       <li>
-  //         <NavLink to="/allProducts">All Products</NavLink>
-  //       </li>
-  //       {user && (
-  //         <>
-  //           <li>
-  //             <NavLink to="/myProducts">My Products</NavLink>
-  //           </li>
-  //           <li>
-  //             <NavLink to="/myBids">My Bids</NavLink>
-  //           </li>
-  //           <li>
-  //             <NavLink to="/createProduct">Create Product</NavLink>
-  //           </li>
-  //         </>
-  //       )}
-  //     </>
-  //   );
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="bg-[#15322b] text-white">
+    <nav className="bg-[#134e4a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -55,7 +32,7 @@ const Navbar = () => {
                 to={link.path}
                 className={({ isActive }) =>
                   `text-base font-medium transition-colors duration-200 ${
-                    isActive ? "text-teal-300" : "text-white hover:text-teal-300"
+                    isActive ? "text-[#fbbf24]" : "text-white hover:text-[#feaa3f]"
                   }`
                 }
               >
@@ -66,7 +43,7 @@ const Navbar = () => {
             {/* Cart Icon */}
             <Link
               to="/cart"
-              className="relative text-white hover:text-teal-300 transition-colors duration-200"
+              className="relative text-white hover:text-[#feaa3f] transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +59,7 @@ const Navbar = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 bg-[#ef4444] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 0
               </span>
             </Link>
@@ -90,13 +67,13 @@ const Navbar = () => {
             {/* Login/Register Buttons */}
             <Link
               to="/login"
-              className="text-base font-medium text-white hover:text-teal-300 transition-colors duration-200"
+              className="text-base font-medium text-white hover:text-[#feaa3f] transition-colors duration-200"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2.5 rounded-full font-medium transition-colors duration-200"
+              className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-medium transition-colors duration-200"
             >
               Register
             </Link>
@@ -136,7 +113,9 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base font-medium ${
-                    isActive ? "bg-teal-700 text-white" : "text-white hover:bg-teal-700"
+                    isActive
+                      ? "bg-[#0f3a36] text-[#fbbf24]"
+                      : "text-white hover:bg-[#0f3a36] hover:text-[#feaa3f]"
                   }`
                 }
               >
@@ -146,21 +125,21 @@ const Navbar = () => {
             <Link
               to="/cart"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-teal-700"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#0f3a36] hover:text-[#feaa3f]"
             >
               Cart
             </Link>
             <Link
               to="/login"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-teal-700"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#0f3a36] hover:text-[#feaa3f]"
             >
               Login
             </Link>
             <Link
               to="/register"
               onClick={() => setIsMenuOpen(false)}
-              className="block mx-3 mt-4 bg-teal-500 hover:bg-teal-600 text-white px-6 py-2.5 rounded-full font-medium text-center transition-colors duration-200"
+              className="block mx-3 mt-4 bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-medium text-center transition-colors duration-200"
             >
               Register
             </Link>

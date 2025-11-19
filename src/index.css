@@ -1,2 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #feaa3f; /* Warm Orange - main brand color */
+  --color-secondary: #134e4a; /* Forest Teal - sophisticated contrast */
+  --color-accent: #fbbf24; /* Golden Yellow - highlights & CTAs */
+  --color-neutral: #2d3748; /* Dark Gray - text & headers */
+  --color-base-100: #ffffff; /* White - main background */
+  --color-base-200: #f7fafc; /* Light Gray - subtle backgrounds */
+  --color-base-300: #e2e8f0; /* Medium Gray - borders & dividers */
+  --color-info: #3b82f6; /* Blue - informational messages */
+  --color-success: #10b981; /* Green - success states */
+  --color-warning: #f59e0b; /* Amber - warnings */
+  --color-error: #ef4444; /* Red - errors & alerts */
+}
+
+* {
+  font-family: "Didact Gothic", sans-serif;
+}

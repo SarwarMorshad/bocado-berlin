@@ -21,27 +21,25 @@ const Hero = () => {
         <div className="text-center text-white space-y-6 animate-fade-in">
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Welcome to{" "}
-            <span className="text-teal-300 block mt-2">BOCADO Berlin</span>
+            Welcome to <span className="text-primary block mt-2">BOCADO Berlin</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed">
-            Experience authentic flavors and culinary excellence in the heart of
-            Berlin
+            Experience authentic flavors and culinary excellence in the heart of Berlin
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <Link
               to="/menu"
-              className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-secondary text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto"
             >
               View Menu
             </Link>
             <Link
               to="/about"
-              className="border-2 border-white hover:bg-white hover:text-[#15322b] text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 w-full sm:w-auto"
+              className="border-2 border-white hover:bg-accent hover:text-[#15322b] text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 w-full sm:w-auto"
             >
               About Us
             </Link>

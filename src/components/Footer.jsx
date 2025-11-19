@@ -1,64 +1,68 @@
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-[#15322b] text-white">
+    <footer className="bg-[#134e4a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 tracking-wider">BOCADO</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Experience authentic flavors and culinary excellence in the heart of Berlin.
-              Where tradition meets innovation.
+            <h3 className="text-2xl font-bold mb-4">BOCADO</h3>
+            <p className="text-gray-300 mb-4">
+              Experience the finest culinary delights with fresh ingredients and authentic flavors. We serve
+              happiness on every plate.
             </p>
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-teal-500 hover:bg-teal-600 p-2 rounded-full transition-colors duration-200"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
               >
-                <FaFacebookF className="text-white" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-teal-500 hover:bg-teal-600 p-2 rounded-full transition-colors duration-200"
-              >
-                <FaInstagram className="text-white" />
+                <FaFacebookF className="h-5 w-5" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-teal-500 hover:bg-teal-600 p-2 rounded-full transition-colors duration-200"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
               >
-                <FaTwitter className="text-white" />
+                <FaTwitter className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
+              >
+                <FaInstagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
+              >
+                <FaYoutube className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="/"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-200 text-sm"
-                >
+                <Link to="/" className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200">
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   to="/menu"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-200 text-sm"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
                 >
                   Menu
                 </Link>
@@ -66,15 +70,23 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-200 text-sm"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
                 >
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/cart"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-200 text-sm"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
                 >
                   Cart
                 </Link>
@@ -82,64 +94,58 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Opening Hours */}
+          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Opening Hours</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span className="font-medium">11:00 - 22:00</span>
+            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-3">
+                <MdLocationOn className="h-5 w-5 text-[#feaa3f] mt-1 flex-shrink-0" />
+                <span className="text-gray-300">1Am Dachsbau 12, 13503 Berlin</span>
               </li>
-              <li className="flex justify-between">
-                <span>Saturday</span>
-                <span className="font-medium">12:00 - 23:00</span>
+              <li className="flex items-center space-x-3">
+                <MdPhone className="h-5 w-5 text-[#feaa3f] flex-shrink-0" />
+                <a
+                  href="tel:+1234567890"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
+                >
+                  +49 30 47036642
+                </a>
               </li>
-              <li className="flex justify-between">
-                <span>Sunday</span>
-                <span className="font-medium">12:00 - 21:00</span>
+              <li className="flex items-center space-x-3">
+                <MdEmail className="h-5 w-5 text-[#feaa3f] flex-shrink-0" />
+                <a
+                  href="mailto:info@bocado.com"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200"
+                >
+                  bocadoberlin@gmail.com
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Newsletter */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-sm text-gray-300">
-                <FaMapMarkerAlt className="text-teal-400 mt-1 flex-shrink-0" />
-                <span>123 Berliner Straße, 10115 Berlin, Germany</span>
-              </li>
-              <li className="flex items-center space-x-3 text-sm text-gray-300">
-                <FaPhone className="text-teal-400 flex-shrink-0" />
-                <a href="tel:+491234567890" className="hover:text-teal-300 transition-colors duration-200">
-                  +49 123 456 7890
-                </a>
-              </li>
-              <li className="flex items-center space-x-3 text-sm text-gray-300">
-                <FaEnvelope className="text-teal-400 flex-shrink-0" />
-                <a href="mailto:info@bocado.com" className="hover:text-teal-300 transition-colors duration-200">
-                  info@bocado.com
-                </a>
-              </li>
-            </ul>
+            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
+            <p className="text-gray-300 mb-4">Subscribe to get special offers and updates.</p>
+            <form className="space-y-2">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#feaa3f] transition-colors duration-200"
+              />
+              <button
+                type="submit"
+                className="w-full bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-400">
-              &copy; {currentYear} BOCADO Berlin. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm text-gray-400">
-              <Link to="/privacy" className="hover:text-teal-300 transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="hover:text-teal-300 transition-colors duration-200">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+        <div className="border-t border-white/10 mt-8 pt-8 text-center">
+          <p className="text-gray-300">&copy; {new Date().getFullYear()} BOCADO. All rights reserved.</p>
         </div>
       </div>
     </footer>

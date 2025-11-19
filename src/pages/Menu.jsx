@@ -248,9 +248,9 @@ const Menu = () => {
   const filteredMenu = activeCategory === "all" ? Object.values(menuData) : [menuData[activeCategory]];
 
   return (
-    <div className="min-h-screen bg-[#0f2820]">
+    <div className="min-h-screen bg-[#134e4a]">
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-[#1a3d3d] to-[#0f2820] text-white py-16">
+      <div className="bg-gradient-to-b from-[#134e4a] to-[#0f3a36] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-4">Menú</h1>
           <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
@@ -259,7 +259,7 @@ const Menu = () => {
       </div>
 
       {/* Category Filter */}
-      <div className="sticky top-0 bg-[#1a3d3d] shadow-md z-10">
+      <div className="sticky top-0 bg-[#134e4a] shadow-md z-10 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
             {categories.map((category) => (
@@ -268,8 +268,8 @@ const Menu = () => {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
                   activeCategory === category.id
-                    ? "bg-teal-500 text-white shadow-lg"
-                    : "bg-[#2d5555] text-gray-200 hover:bg-teal-600"
+                    ? "bg-[#feaa3f] text-white shadow-lg"
+                    : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
                 }`}
               >
                 {category.name}
@@ -280,10 +280,10 @@ const Menu = () => {
       </div>
 
       {/* Menu Items */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#134e4a]">
         {filteredMenu.map((category, idx) => (
           <div key={idx} className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 border-b-2 border-teal-500 pb-2">
+            <h2 className="text-3xl font-bold text-white mb-8 border-b-2 border-[#feaa3f] pb-2">
               {category.title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -294,16 +294,16 @@ const Menu = () => {
                 >
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-xl font-semibold text-white">{item.name}</h3>
-                    <span className="text-2xl font-bold text-teal-400">€{item.price}</span>
+                    <span className="text-2xl font-bold text-[#feaa3f]">€{item.price}</span>
                   </div>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{item.description}</p>
-                  <button
+                  <p className="text-gray-200 text-sm mb-4 leading-relaxed">{item.description}</p>
+                  {/* <button
                     onClick={() => handleAddToCart(item)}
-                    className="w-full bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
+                    className="w-full bg-[#feaa3f] hover:bg-[#fbbf24] text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
                   >
                     <FaShoppingCart />
                     Add to Cart
-                  </button>
+                  </button> */}
                 </div>
               ))}
             </div>
@@ -312,16 +312,6 @@ const Menu = () => {
       </div>
 
       {/* Contact Info Footer */}
-      <div className="bg-[#1a3d3d] text-white py-8 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl font-bold mb-4">¡Buen Provecho!</h3>
-          <div className="space-y-2 text-gray-200">
-            <p className="text-lg">Am Dachsbau 12, 13503 Berlin</p>
-            <p>+49 30 47036642</p>
-            <p>bocadoberlin@gmail.com</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
