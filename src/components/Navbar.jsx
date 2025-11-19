@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-// import logo from "../assets/bocado.jpg"; // Adjust the path as necessary
+import { Link, NavLink } from "react-router-dom"; // Adjust the path as necessary
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
