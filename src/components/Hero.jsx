@@ -17,7 +17,7 @@ const Hero = () => {
       image: "https://i.postimg.cc/pr5P12Lh/hero-1.jpg", // Replace with your image path
       gradient: "from-[#134e4a] via-[#0f3a36] to-[#134e4a]",
       cta1: { text: "Menü ansehen", link: "/menu" },
-      cta2: { text: "Tisch reservieren", link: "/contact" },
+      cta2: { text: "Tisch reservieren", link: "/reservation" },
     },
     {
       id: 2,
@@ -25,8 +25,8 @@ const Hero = () => {
       subtitle: "Kulinarische Reise mit traditionellen Aromen und frischen Zutaten",
       image: "https://i.postimg.cc/DZM2gWFt/hero-2.jpg", // Replace with your image path
       gradient: "from-[#0f3a36] via-[#134e4a] to-[#0f3a36]",
-      cta1: { text: "Gerichte entdecken", link: "/menu" },
-      cta2: { text: "Unsere Geschichte", link: "/about" },
+      cta1: { text: "Einen Tisch Buchen", link: "/reservation" },
+      cta2: { text: "Gerichte entdecken", link: "/menu" },
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const Hero = () => {
       image: "https://i.postimg.cc/brSqFzwf/hero-3.jpg", // Replace with your image path
       gradient: "from-[#134e4a] via-[#1a5550] to-[#134e4a]",
       cta1: { text: "Menü ansehen", link: "/menu" },
-      cta2: { text: "Kontaktieren Sie uns", link: "/contact" },
+      cta2: { text: "Tisch Reservieren", link: "/reservation" },
     },
   ];
 

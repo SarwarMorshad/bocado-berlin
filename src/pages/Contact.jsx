@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 // import toast from "react-hot-toast";
 
 const Contact = () => {
@@ -40,64 +41,72 @@ const Contact = () => {
   //   };
 
   return (
-    <div className="min-h-screen bg-[#134e4a]">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#134e4a] to-[#0f3a36] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Kontaktieren Sie Uns</h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
-              Wir würden gerne von Ihnen hören. Machen Sie eine Reservierung oder nehmen Sie Kontakt mit uns
-              auf!
-            </p>
+    <>
+      <Helmet>
+        <title>Kontakt</title>
+        <meta
+          name="description"
+          content="Nehmen Sie Kontakt mit BOCADO auf für Reservierungen, Anfragen oder Feedback. Wir freuen uns, von Ihnen zu hören!"
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#134e4a]">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-[#134e4a] to-[#0f3a36] text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">Kontaktieren Sie Uns</h1>
+              <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+                Wir würden gerne von Ihnen hören. Machen Sie eine Reservierung oder nehmen Sie Kontakt mit uns
+                auf!
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-16 bg-[#134e4a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {/* Location */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
-                <MdLocationOn className="h-8 w-8 text-white" />
+        {/* Contact Info Cards */}
+        <section className="py-16 bg-[#134e4a]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {/* Location */}
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
+                  <MdLocationOn className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Standort</h3>
+                <p className="text-gray-200 text-sm">Am Dachsbau 12</p>
+                <p className="text-gray-200 text-sm">13503 Berlin</p>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Standort</h3>
-              <p className="text-gray-200 text-sm">Am Dachsbau 12</p>
-              <p className="text-gray-200 text-sm">13503 Berlin</p>
-            </div>
 
-            {/* Phone */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
-                <MdPhone className="h-8 w-8 text-white" />
+              {/* Phone */}
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
+                  <MdPhone className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Telefon</h3>
+                <a
+                  href="tel:+493047036642"
+                  className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm"
+                >
+                  +49 30 47036642
+                </a>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Telefon</h3>
-              <a
-                href="tel:+493047036642"
-                className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm"
-              >
-                +49 30 47036642
-              </a>
-            </div>
 
-            {/* Email */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
-                <MdEmail className="h-8 w-8 text-white" />
+              {/* Email */}
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
+                  <MdEmail className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <a
+                  href="mailto:bocadoberlin@gmail.com"
+                  className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm break-all"
+                >
+                  bocadoberlin@gmail.com
+                </a>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a
-                href="mailto:bocadoberlin@gmail.com"
-                className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm break-all"
-              >
-                bocadoberlin@gmail.com
-              </a>
-            </div>
 
-            {/* Hours */}
-            {/* <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
+              {/* Hours */}
+              {/* <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
                 <MdAccessTime className="h-8 w-8 text-white" />
               </div>
@@ -105,12 +114,12 @@ const Contact = () => {
               <p className="text-gray-200 text-sm">Mo-Do: 11:00-23:00</p>
               <p className="text-gray-200 text-sm">Fr-Sa: 11:00-23:00 Uhr</p>
             </div> */}
-          </div>
+            </div>
 
-          {/* Main Content: Form and Map */}
-          <div className="grid lg:grid-cols-1 gap-8">
-            {/* Reservation Form - COMMENTED OUT FOR LATER */}
-            {/* 
+            {/* Main Content: Form and Map */}
+            <div className="grid lg:grid-cols-1 gap-8">
+              {/* Reservation Form - COMMENTED OUT FOR LATER */}
+              {/* 
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8">
               <h2 className="text-3xl font-bold text-white mb-6">Make a Reservation</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -247,124 +256,126 @@ const Contact = () => {
             </div>
             */}
 
-            {/* Map and Additional Info */}
-            <div className="space-y-8">
-              {/* Map Placeholder */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden h-80">
-                {/* Google Maps Embed - Replace with your actual map */}
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.8474447996747!2d13.289699776860047!3d52.58686197207733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851e5c8c9e5e5%3A0x8c9d9c8d9c8d9c8d!2sAm%20Dachsbau%2012%2C%2013503%20Berlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="BOCADO Berlin Location"
-                ></iframe>
+              {/* Map and Additional Info */}
+              <div className="space-y-8">
+                {/* Map Placeholder */}
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden h-80">
+                  {/* Google Maps Embed - Replace with your actual map */}
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.8474447996747!2d13.289699776860047!3d52.58686197207733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851e5c8c9e5e5%3A0x8c9d9c8d9c8d9c8d!2sAm%20Dachsbau%2012%2C%2013503%20Berlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="BOCADO Berlin Location"
+                  ></iframe>
+                </div>
+
+                {/* Opening Hours Card */}
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                    <MdAccessTime className="h-6 w-6 text-[#feaa3f] mr-2" />
+                    Öffnungszeiten
+                  </h3>
+                  <div className="space-y-3 text-gray-200">
+                    <div className="flex justify-between border-b border-white/10 pb-3">
+                      <span className="font-semibold text-white">Montag - Donnerstag</span>
+                      <span>11:00 - 23:00 Uhr</span>
+                    </div>
+                    <div className="flex justify-between border-b border-white/10 pb-3">
+                      <span className="font-semibold text-white">Freitag - Samstag</span>
+                      <span>11:00 - 23:00 Uhr</span>
+                    </div>
+                    <div className="flex justify-between border-b border-white/10 pb-3">
+                      <span className="font-semibold text-white">Sonntag</span>
+                      <span>11:00 - 23:00 Uhr</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Media */}
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Folge Uns</h3>
+                  <div className="flex space-x-4">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61580057680833"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-12 h-12 bg-[#feaa3f] hover:bg-[#fbbf24] rounded-full transition-colors duration-200"
+                    >
+                      <FaFacebookF className="h-5 w-5 text-white" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/bocado.berlin?igsh=emZlN2cxcDYwY244"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-12 h-12 bg-[#feaa3f] hover:bg-[#fbbf24] rounded-full transition-colors duration-200"
+                    >
+                      <FaInstagram className="h-5 w-5 text-white" />
+                    </a>
+                  </div>
+                  <p className="text-gray-300 text-sm mt-4">
+                    Folgen Sie uns auf Social Media, um die neuesten Updates, Angebote und köstlichen Gerichte
+                    zu entdecken.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-[#0f3a36]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-center text-white mb-12">
+              Häufig Gestellte <span className="text-[#feaa3f]">Fragen</span>
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">Brauche ich eine Reservierung?</h3>
+                <p className="text-gray-200">
+                  Während Walk-Ins willkommen sind, empfehlen wir dringend, insbesondere an Wochenenden und
+                  Feiertagen, eine Reservierung vorzunehmen, um sicherzustellen, dass wir einen Tisch für Sie
+                  bereit haben.
+                </p>
               </div>
 
-              {/* Opening Hours Card */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <MdAccessTime className="h-6 w-6 text-[#feaa3f] mr-2" />
-                  Öffnungszeiten
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  Berücksichtigen Sie diätetische Einschränkungen?
                 </h3>
-                <div className="space-y-3 text-gray-200">
-                  <div className="flex justify-between border-b border-white/10 pb-3">
-                    <span className="font-semibold text-white">Montag - Donnerstag</span>
-                    <span>11:00 - 23:00 Uhr</span>
-                  </div>
-                  <div className="flex justify-between border-b border-white/10 pb-3">
-                    <span className="font-semibold text-white">Freitag - Samstag</span>
-                    <span>11:00 - 23:00 Uhr</span>
-                  </div>
-                  <div className="flex justify-between border-b border-white/10 pb-3">
-                    <span className="font-semibold text-white">Sonntag</span>
-                    <span>11:00 - 23:00 Uhr</span>
-                  </div>
-                </div>
+                <p className="text-gray-200">
+                  Ja! Wir bieten vegetarische und glutenfreie Optionen an. Bitte informieren Sie uns bei der
+                  Reservierung über etwaige diätetische Einschränkungen, und wir werden diese gerne
+                  berücksichtigen.
+                </p>
               </div>
 
-              {/* Social Media */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Folge Uns</h3>
-                <div className="flex space-x-4">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61580057680833"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-[#feaa3f] hover:bg-[#fbbf24] rounded-full transition-colors duration-200"
-                  >
-                    <FaFacebookF className="h-5 w-5 text-white" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/bocado.berlin?igsh=emZlN2cxcDYwY244"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-[#feaa3f] hover:bg-[#fbbf24] rounded-full transition-colors duration-200"
-                  >
-                    <FaInstagram className="h-5 w-5 text-white" />
-                  </a>
-                </div>
-                <p className="text-gray-300 text-sm mt-4">
-                  Folgen Sie uns auf Social Media, um die neuesten Updates, Angebote und köstlichen Gerichte
-                  zu entdecken.
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  Bieten Sie private Speisen oder Veranstaltungen an?
+                </h3>
+                <p className="text-gray-200">
+                  Ja! Wir können private Feiern und besondere Veranstaltungen ausrichten. Bitte rufen Sie uns
+                  unter +49 30 47036642 an oder senden Sie uns eine E-Mail, um Ihre Anforderungen zu
+                  besprechen.
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">Gibt es Parkmöglichkeiten?</h3>
+                <p className="text-gray-200">
+                  In der Nähe gibt es Parkmöglichkeiten auf der Straße. Wir sind auch gut mit öffentlichen
+                  Verkehrsmitteln erreichbar.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-[#0f3a36]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">
-            Häufig Gestellte <span className="text-[#feaa3f]">Fragen</span>
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Brauche ich eine Reservierung?</h3>
-              <p className="text-gray-200">
-                Während Walk-Ins willkommen sind, empfehlen wir dringend, insbesondere an Wochenenden und
-                Feiertagen, eine Reservierung vorzunehmen, um sicherzustellen, dass wir einen Tisch für Sie
-                bereit haben.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
-                Berücksichtigen Sie diätetische Einschränkungen?
-              </h3>
-              <p className="text-gray-200">
-                Ja! Wir bieten vegetarische und glutenfreie Optionen an. Bitte informieren Sie uns bei der
-                Reservierung über etwaige diätetische Einschränkungen, und wir werden diese gerne
-                berücksichtigen.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
-                Bieten Sie private Speisen oder Veranstaltungen an?
-              </h3>
-              <p className="text-gray-200">
-                Ja! Wir können private Feiern und besondere Veranstaltungen ausrichten. Bitte rufen Sie uns
-                unter +49 30 47036642 an oder senden Sie uns eine E-Mail, um Ihre Anforderungen zu besprechen.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Gibt es Parkmöglichkeiten?</h3>
-              <p className="text-gray-200">
-                In der Nähe gibt es Parkmöglichkeiten auf der Straße. Wir sind auch gut mit öffentlichen
-                Verkehrsmitteln erreichbar.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

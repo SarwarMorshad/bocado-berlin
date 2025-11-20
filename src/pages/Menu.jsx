@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Menu = () => {
@@ -248,71 +249,80 @@ const Menu = () => {
   const filteredMenu = activeCategory === "all" ? Object.values(menuData) : [menuData[activeCategory]];
 
   return (
-    <div className="min-h-screen bg-[#134e4a]">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-b from-[#134e4a] to-[#0f3a36] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-4">Menú</h1>
-          <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
-          <p className="text-3xl mt-2 text-primary">Especial de gran inauguración</p>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="sticky top-0 bg-[#134e4a] shadow-md z-10 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
-                  activeCategory === category.id
-                    ? "bg-[#feaa3f] text-white shadow-lg"
-                    : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
+    <>
+      <Helmet>
+        <title>Speisekarte</title>
+        <meta
+          name="description"
+          content="Entdecken Sie die vielfältige Speisekarte von BOCADO Berlin mit authentischen spanischen Tapas, Spezialitäten und mehr."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#134e4a]">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-b from-[#134e4a] to-[#0f3a36] text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold mb-4">Menú</h1>
+            <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
+            <p className="text-3xl mt-2 text-primary">Especial de gran inauguración</p>
           </div>
         </div>
-      </div>
 
-      {/* Menu Items */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#134e4a]">
-        {filteredMenu.map((category, idx) => (
-          <div key={idx} className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 border-b-2 border-[#feaa3f] pb-2">
-              {category.title}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.items.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-lg hover:shadow-2xl hover:bg-white/15 transition-all duration-300 p-6"
+        {/* Category Filter */}
+        <div className="sticky top-0 bg-[#134e4a] shadow-md z-10 border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
+                    activeCategory === category.id
+                      ? "bg-[#feaa3f] text-white shadow-lg"
+                      : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
+                  }`}
                 >
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-semibold text-white">{item.name}</h3>
-                    <span className="text-2xl font-bold text-[#feaa3f]">€{item.price}</span>
-                  </div>
-                  <p className="text-gray-200 text-sm mb-4 leading-relaxed">{item.description}</p>
-                  {/* <button
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Menu Items */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#134e4a]">
+          {filteredMenu.map((category, idx) => (
+            <div key={idx} className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-8 border-b-2 border-[#feaa3f] pb-2">
+                {category.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.items.map((item) => (
+                  <div
+                    key={item.id}
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-lg hover:shadow-2xl hover:bg-white/15 transition-all duration-300 p-6"
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-xl font-semibold text-white">{item.name}</h3>
+                      <span className="text-2xl font-bold text-[#feaa3f]">€{item.price}</span>
+                    </div>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">{item.description}</p>
+                    {/* <button
                     onClick={() => handleAddToCart(item)}
                     className="w-full bg-[#feaa3f] hover:bg-[#fbbf24] text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
                   >
                     <FaShoppingCart />
                     Add to Cart
                   </button> */}
-                </div>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Contact Info Footer */}
-    </div>
+        {/* Contact Info Footer */}
+      </div>
+    </>
   );
 };
 
