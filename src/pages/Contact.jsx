@@ -1,18 +1,18 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from "react-icons/md";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    guests: "2",
-    message: "",
-  });
+  //   const [formData, setFormData] = useState({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     date: "",
+  //     time: "",
+  //     guests: "2",
+  //     message: "",
+  //   });
 
   //   const handleChange = (e) => {
   //     setFormData({

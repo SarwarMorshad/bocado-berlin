@@ -31,7 +31,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-base font-medium transition-colors duration-200 ${
+                  `text-base font-semibold transition-colors duration-200 ${
                     isActive ? "text-[#fbbf24]" : "text-white hover:text-[#feaa3f]"
                   }`
                 }
