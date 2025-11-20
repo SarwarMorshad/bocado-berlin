@@ -66,13 +66,14 @@ const About = () => {
 
             {/* Story Content */}
             <div className="text-white">
-              <h2 className="text-4xl font-bold mb-6 text-[#feaa3f]">Our Story</h2>
+              <h2 className="text-4xl font-bold mb-6 text-[#feaa3f]">Unsere Geschichte</h2>
               <div className="space-y-4 text-gray-200 leading-relaxed text-lg">
                 <p>
                   BOCADO Berlin hat im November 2025 seine Türen geöffnet – mit einer einfachen Mission: den
-                  authentischen Geschmack Spaniens nach Berlin zu bringen. Gegründet von Ashik Ahammed und
-                  Main Uddin, sind wir schnell zu einem beliebten Ziel für Einheimische und Besucher geworden,
-                  die echte spanische Küche genießen möchten.
+                  authentischen Geschmack Spaniens nach Berlin zu bringen. Gegründet von{" "}
+                  <span className="text-primary">Ashik Ahammed</span> und
+                  <span className="text-primary"> Main Uddin</span>, sind wir schnell zu einem beliebten Ziel
+                  für Einheimische und Besucher geworden, die echte spanische Küche genießen möchten.
                 </p>
                 <p>
                   Unser Name „BOCADO“ bedeutet auf Spanisch „ein Bissen“ oder „eine Kostprobe“ und spiegelt
@@ -158,7 +159,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Besuchen Sie
-            <span className="text-[#feaa3f]">Uns</span>
+            <span className="text-[#feaa3f]"> Uns</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">

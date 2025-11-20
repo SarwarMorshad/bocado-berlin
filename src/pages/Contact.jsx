@@ -57,7 +57,7 @@ const Contact = () => {
       {/* Contact Info Cards */}
       <section className="py-16 bg-[#134e4a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {/* Location */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
@@ -97,14 +97,14 @@ const Contact = () => {
             </div>
 
             {/* Hours */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
+            {/* <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
                 <MdAccessTime className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Öffnungszeiten</h3>
               <p className="text-gray-200 text-sm">Mo-Do: 11:00-23:00</p>
-              <p className="text-gray-200 text-sm">Fr-Sa: 11:00-24:00</p>
-            </div>
+              <p className="text-gray-200 text-sm">Fr-Sa: 11:00-23:00 Uhr</p>
+            </div> */}
           </div>
 
           {/* Main Content: Form and Map */}
@@ -277,11 +277,11 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between border-b border-white/10 pb-3">
                     <span className="font-semibold text-white">Freitag - Samstag</span>
-                    <span>11:00 - 24:00 Uhr</span>
+                    <span>11:00 - 23:00 Uhr</span>
                   </div>
                   <div className="flex justify-between border-b border-white/10 pb-3">
                     <span className="font-semibold text-white">Sonntag</span>
-                    <span>11:00 - 22:00 Uhr</span>
+                    <span>11:00 - 23:00 Uhr</span>
                   </div>
                 </div>
               </div>

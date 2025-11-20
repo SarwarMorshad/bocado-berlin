@@ -5,10 +5,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Menu", path: "/menu" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: "Startseite", path: "/" },
+    { name: "Speisekarte", path: "/menu" },
+    { name: "Tisch Reservieren", path: "/reservation" },
+    { name: "Über uns", path: "/about" },
+    { name: "Kontakt", path: "/contact" },
   ];
 
   const toggleMenu = () => {

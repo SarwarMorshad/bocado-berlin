@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const GrandOpeningMarquee = () => {
   return (
-    <div className="bg-gradient-to-r from-[#134e4a] via-[#0f3a36] to-[#134e4a] py-3 shadow-2xl">
+    <div className="bg-gradient-to-r from-[#134e4a] via-[#0f3a36] to-[#134e4a] py-3 shadow-2xl  border-y-2 border-primary">
       <Marquee speed={30} gradient={false}>
         <div className="flex items-center space-x-8 text-white font-semibold text-lg">
           <span>✨ BOCADO Berlin Grand Opening ✨</span>
