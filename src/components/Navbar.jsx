@@ -7,9 +7,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Startseite", path: "/" },
     { name: "Speisekarte", path: "/menu" },
-    { name: "Tisch Reservieren", path: "/reservation" },
+
     { name: "Über uns", path: "/about" },
     { name: "Kontakt", path: "/contact" },
+    { name: "Tisch Reservieren", path: "/reservation" },
   ];
 
   const toggleMenu = () => {
