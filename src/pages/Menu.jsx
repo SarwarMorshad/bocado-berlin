@@ -12,43 +12,44 @@ const Menu = () => {
         {
           id: "01",
           name: "Pan Con Tomate",
-          description: "Baguette with grated Spanish mountain tomato",
+          description: "Baguette mit geriebener spanischer Bergtomate",
           price: "6.50",
         },
         {
           id: "02",
           name: "Olivas Marinadas",
-          description: "Marinated mixed olives with fresh herbs",
+          description: "Marinierte gemischte Oliven mit frischen Kräutern",
           price: "6.50",
         },
         {
           id: "03",
           name: "Serrano Gran Reserva",
-          description: "Serrano ham aged 3 months",
+          description: "Serrano schinken 3 Monate gereift",
           price: "7.90",
         },
         {
           id: "04",
           name: "Queso De Cabra",
-          description: "Caramelized goat cheese with honey",
+          description: "Karamelisierter Ziegenkäse mit Honig",
           price: "7.90",
         },
         {
           id: "05",
           name: "Queso Manchego",
-          description: "Six month aged sheep cheese",
+          description: "Sechs Monate gereifter Schafskäse",
           price: "6.90",
         },
         {
           id: "06",
           name: "Queso De Oveja",
-          description: "Oven-baked sheep cheese with herbs, tomatoes, onions & garlic",
+          description: "Im Ofen gebackener Schafskäse mit Kräutern, Tomaten, Zwiebeln & Knoblauch",
           price: "7.50",
         },
         {
           id: "25",
           name: "Plato de BOCADO",
-          description: "Culinary journey with various cheese and ham, fruit, olives, jam, honey, nuts",
+          description:
+            "Kulinarische Reise mit verschieden Käse und Schinkensorte, Obst, Oliven, Marmelade, Honig, Nüssen",
           price: "24.90",
         },
       ],
@@ -59,43 +60,43 @@ const Menu = () => {
         {
           id: "30",
           name: "Pimientos de Padrón",
-          description: "Small spicy fried peppers with sea salt",
+          description: "Kleine pikante frittierte Paprikas mit Meersalz",
           price: "7.50",
         },
         {
           id: "31",
           name: "Patatas Bravas",
-          description: "Fried spicy potato pieces with tomato-chili sauce",
+          description: "Frittierte pikante Kartoffelstücke mit Tomaten - Chili - Sauce",
           price: "6.90",
         },
         {
           id: "32",
           name: "Dátiles con y tocino",
-          description: "Dates wrapped in bacon",
+          description: "Datteln im Speckmantel",
           price: "7.90",
         },
         {
           id: "33",
           name: "Champignons al ajillo",
-          description: "Fried mushrooms with garlic and parsley",
+          description: "Gebratene Champignons mit Knoblauch und Petersillien",
           price: "6.90",
         },
         {
           id: "34",
           name: "Calamares Pequeños",
-          description: "Breaded and fried baby calamari with lemon",
+          description: "Panierte und frittierte Baby - Calamares mit Zitrone",
           price: "8.90",
         },
         {
           id: "35",
           name: "Gambas a la Tempura con Torzo de Limón",
-          description: "Large prawns in tempura batter with fresh lemon",
+          description: "Große Garnelen im Tempurateig mit frischer Zitrone",
           price: "7.50",
         },
         {
           id: "36",
           name: "Pulpo a la gallega",
-          description: "Grilled octopus with potatoes",
+          description: "Gegrillter Pulpo mit Kartoffeln",
           price: "9.90",
         },
       ],
@@ -106,7 +107,7 @@ const Menu = () => {
         {
           id: "51",
           name: "Sopa de Tomate",
-          description: "Fresh tomato soup with basil & butter croutons and parmesan",
+          description: "Frischen Tomaten Suppe mit Basilikum & Butter- Croutons und Parmesan",
           price: "6.90",
         },
       ],
@@ -117,14 +118,14 @@ const Menu = () => {
         {
           id: "55",
           name: "Ensalada Mixta",
-          description: "Mixed salad with cucumber, tomatoes, peppers and olives",
+          description: "Gemischter Salat mit Gurke, Tomaten, Paprika und Oliven",
           price: "6.90",
         },
         {
           id: "57",
           name: "Ensalada con Queso de Cabra",
           description:
-            "Mixed salad with glazed & baked honey goat cheese, tomatoes, cucumber, peppers, corn and olives in house dressing",
+            "Gemischter Salat mit glasiertem & gebackenem Honig-Ziegenkäse,Tomaten, Gurke, Paprika, Mais und Oliven in Hausdressing",
           price: "13.90",
         },
       ],
@@ -135,14 +136,14 @@ const Menu = () => {
         {
           id: "61",
           name: "Nachos con queso",
-          description: "Corn tortilla chips, baked with cheddar-mozzarella cheese, with salsa dip",
+          description: "MaisTortilla Chips, überbacken mit Cheddar-Mozzarella Käse, dazu Salsa Dip",
           price: "10.90",
         },
         {
           id: "62",
           name: "Nachos BOCADO",
           description:
-            "Corn tortilla chips with onions, tomatoes, cilantro, baked with cheddar-mozzarella cheese, with sour cream, guacamole",
+            "MaisTortilla Chips mit Zwiebeln, Tomaten, Koriander, überbacken mit Cheddar-Mozzarella Käse, dazu Sauerrahm, Guacamole",
           price: "12.90",
         },
       ],
@@ -153,48 +154,50 @@ const Menu = () => {
         {
           id: "70",
           name: "Paella de Mariscos",
-          description: "Classic Spanish rice dish with saffron, fresh vegetables, seafood and 2 large prawns",
+          description:
+            "Klassisches, spanisches Reisgericht mit Safran, frischem Gemüse, Meeresfrüchten und 2 Großgarnelen",
           price: "17.90",
         },
         {
           id: "71",
           name: "Gambas Al ajillo",
-          description: "5 large prawns in garlic-white wine-oil, parsley and fresh chili peppers",
+          description:
+            "5 Stück Größen garnelen in Knoblauch - Weißwein-Öl, Petersilie und frischen Chilischoten",
           price: "14.90",
         },
         {
           id: "72",
           name: "Fajitas de Verduras",
           description:
-            "Various vegetables with onions, peppers and garlic in a hot pan, with salsa, guacamole, sour cream and 3 tortilla breads",
+            "Verschieden Gemüse mit Zwiebeln, Paprika und Knoblauch in einer heißen Pfanne, dazu Salsa, Guacamole, Sauerrahm und 3 Tortillabrote",
           price: "16.90",
         },
         {
           id: "73",
           name: "Fajitas con Pollo",
           description:
-            "Chicken breast cubes with onions, peppers and garlic in a hot pan, with salsa, guacamole, sour cream and 3 tortilla breads",
+            "Hähnchenbrustwürfel mit Zwiebeln, Paprika und Knoblauch in einer heißen Pfanne, dazu Salsa, Guacamole, Sauerrahm und 3 Tortillabrote",
           price: "17.90",
         },
         {
           id: "78",
           name: "Mango con Pollo",
           description:
-            "Fried chicken breast cubes in mango cream sauce, with walnuts and almonds, served with Spanish rice",
+            "Gebratene Hähnchenbrustwürfel in Mango-Sahnesauce, mit Walnüssen und Mandeln, serviert mit Spanischem Reis",
           price: "18.90",
         },
         {
           id: "80",
           name: "Steak A la BOCADO",
           description:
-            "220g grilled Argentine rump steak with herb butter, vegetables, roasted onions, rosemary potatoes and salad",
+            "220gm gegrilltes Argentinisches Rumpsteak mit Kräuterbutter, Gemüse, gerösteten Zwiebeln, Rosmarinkartoffeln und Salatbeilage",
           price: "24.90",
         },
         {
           id: "81",
           name: "Filete de lomo de Cerdo",
           description:
-            "2 pieces grilled pork loin steak in mushroom cream sauce with Spanish potato pieces and salad",
+            "2 Stück gegrilltes Schweinerückensteak in Champignon-sahnesauce mit spanischen Kartoffelstücken und Salatbeilage",
           price: "18.90",
         },
       ],
@@ -205,7 +208,7 @@ const Menu = () => {
         {
           id: "100",
           name: "Nuggets de Pollo",
-          description: "5 homemade breaded chicken breast fillets, with fries",
+          description: "5 Hausgemachte Hähnchenbrustfilet paniert, mit Pommes",
           price: "8.90",
         },
       ],
@@ -216,13 +219,13 @@ const Menu = () => {
         {
           id: "110",
           name: "Crema Catalan",
-          description: "Spanish creme brulee, covered with a firm caramel layer",
+          description: "Spanische Creme Brulee,\nmit einer festen Karamellschicht überzogen.",
           price: "7.90",
         },
         {
           id: "111",
           name: "Churros con chocolate",
-          description: "Classic Spanish pastry, with chocolate sauce",
+          description: "Klassisches Spanisches Gebäck, dazu Schokoladensoße",
           price: "8.90",
         },
       ],
