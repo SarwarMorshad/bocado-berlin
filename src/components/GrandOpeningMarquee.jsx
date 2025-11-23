@@ -7,7 +7,6 @@ const GrandOpeningMarquee = () => {
         <div className="flex items-center space-x-8 text-white font-semibold text-lg">
           <span>✨ BOCADO Berlin Grand Opening ✨</span>
           <span>🎊 Dienstag, 25. November 2025 🎊</span>
-          <span>🎵 Live Musik den ganzen Abend 🎵</span>
           <span>🥂 Sekt aufs Haus für alle Gäste 🥂</span>
           <span>🎁 Exklusive Überraschungsgeschenke 🎁</span>
           <span>📞 Jetzt Tisch reservieren: +49 30 47036642 📞</span>
@@ -17,7 +16,6 @@ const GrandOpeningMarquee = () => {
 
           <span>✨ BOCADO Berlin Grand Opening ✨</span>
           <span>🎊 Dienstag, 25. November 2025 🎊</span>
-          <span>🎵 Live Musik den ganzen Abend 🎵</span>
           <span>🥂 Sekt aufs Haus für alle Gäste 🥂</span>
           <span>🎁 Exklusive Überraschungsgeschenke 🎁</span>
           <span>📞 Jetzt Tisch reservieren: +49 30 47036642 📞</span>

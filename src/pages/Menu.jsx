@@ -241,11 +241,6 @@ const Menu = () => {
     { id: "postres", name: "Nachspeisen" },
   ];
 
-  // const handleAddToCart = (item) => {
-  //   // TODO: Implement cart functionality
-  //   console.log("Added to cart:", item);
-  // };
-
   const filteredMenu = activeCategory === "all" ? Object.values(menuData) : [menuData[activeCategory]];
 
   return (
@@ -260,7 +255,7 @@ const Menu = () => {
       <div className="min-h-screen bg-[#134e4a]">
         {/* Hero Section */}
         <div className="bg-gradient-to-b from-[#134e4a] to-[#0f3a36] text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
             <h1 className="text-5xl font-bold mb-4">Menú</h1>
             <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
             <p className="text-3xl mt-2 text-primary">Especial de gran inauguración</p>
@@ -275,9 +270,9 @@ const Menu = () => {
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
+                  className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 transform hover:scale-105 ${
                     activeCategory === category.id
-                      ? "bg-[#feaa3f] text-white shadow-lg"
+                      ? "bg-[#feaa3f] text-white shadow-lg scale-105"
                       : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
                   }`}
                 >
@@ -296,31 +291,23 @@ const Menu = () => {
                 {category.title}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.items.map((item) => (
+                {category.items.map((item, itemIdx) => (
                   <div
                     key={item.id}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-lg hover:shadow-2xl hover:bg-white/15 transition-all duration-300 p-6"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-lg hover:shadow-2xl hover:bg-white/15 transition-all duration-300 p-6 transform hover:-translate-y-1 opacity-0 animate-fade-in-up"
+                    style={{ animationDelay: `${itemIdx * 50}ms`, animationFillMode: "forwards" }}
                   >
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-xl font-semibold text-white">{item.name}</h3>
                       <span className="text-2xl font-bold text-[#feaa3f]">€{item.price}</span>
                     </div>
                     <p className="text-gray-200 text-sm mb-4 leading-relaxed">{item.description}</p>
-                    {/* <button
-                    onClick={() => handleAddToCart(item)}
-                    className="w-full bg-[#feaa3f] hover:bg-[#fbbf24] text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
-                  >
-                    <FaShoppingCart />
-                    Add to Cart
-                  </button> */}
                   </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
-
-        {/* Contact Info Footer */}
       </div>
     </>
   );

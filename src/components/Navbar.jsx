@@ -1,21 +1,67 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom"; // Adjust the path as necessary
+import { useState, useEffect, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { gsap } from "gsap";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
+  const menuItemsRef = useRef([]);
 
   const navLinks = [
     { name: "Startseite", path: "/" },
     { name: "Speisekarte", path: "/menu" },
-    { name: "Tisch Reservieren", path: "/reservation" },
     { name: "Über uns", path: "/about" },
     { name: "Kontakt", path: "/contact" },
-    { name: "Tisch Reservieren", path: "/reservation" },
   ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // GSAP Animation for mobile menu
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Animate menu opening
+      gsap.fromTo(
+        mobileMenuRef.current,
+        {
+          height: 0,
+          opacity: 0,
+        },
+        {
+          height: "auto",
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out",
+        }
+      );
+
+      // Stagger animate menu items
+      gsap.fromTo(
+        menuItemsRef.current,
+        {
+          x: -50,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0.1,
+          ease: "power2.out",
+          delay: 0.1,
+        }
+      );
+    } else if (mobileMenuRef.current) {
+      // Animate menu closing
+      gsap.to(mobileMenuRef.current, {
+        height: 0,
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.in",
+      });
+    }
+  }, [isMenuOpen]);
 
   return (
     <nav className="bg-[#134e4a] text-white">
@@ -26,7 +72,7 @@ const Navbar = () => {
             BOCADO
           </Link>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <NavLink
@@ -42,50 +88,24 @@ const Navbar = () => {
               </NavLink>
             ))}
 
-            {/* Cart Icon */}
-            {/* <Link
-              to="/cart"
-              className="relative text-white hover:text-[#feaa3f] transition-colors duration-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              <span className="absolute -top-2 -right-2 bg-[#ef4444] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
-            </Link> */}
-
-            {/* Login/Register Buttons */}
-            {/* <Link
-              to="/login"
-              className="text-base font-medium text-white hover:text-[#feaa3f] transition-colors duration-200"
-            >
-              Login
-            </Link>
+            {/* Reserve Button - Desktop */}
             <Link
-              to="/register"
-              className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-medium transition-colors duration-200"
+              to="/reservation"
+              className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Register
-            </Link> */}
+              Tisch Reservieren
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none transition-transform duration-300 hover:scale-110"
+            >
               <svg
-                className="h-6 w-6"
+                className="h-6 w-6 transition-transform duration-300"
+                style={{ transform: isMenuOpen ? "rotate(90deg)" : "rotate(0deg)" }}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -106,13 +126,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div ref={mobileMenuRef} className="md:hidden overflow-hidden" style={{ height: 0, opacity: 0 }}>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <NavLink
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
+                ref={(el) => (menuItemsRef.current[index] = el)}
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base font-medium ${
                     isActive
@@ -124,27 +145,16 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
-            {/* <Link
-              to="/cart"
-              onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#0f3a36] hover:text-[#feaa3f]"
-            >
-              Cart
-            </Link>
+
+            {/* Reserve Button - Mobile */}
             <Link
-              to="/login"
+              to="/reservation"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#0f3a36] hover:text-[#feaa3f]"
+              ref={(el) => (menuItemsRef.current[navLinks.length] = el)}
+              className="block mx-3 mt-4 bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-semibold text-center transition-colors duration-200"
             >
-              Login
+              Tisch Reservieren
             </Link>
-            <Link
-              to="/register"
-              onClick={() => setIsMenuOpen(false)}
-              className="block mx-3 mt-4 bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-medium text-center transition-colors duration-200"
-            >
-              Register
-            </Link> */}
           </div>
         </div>
       )}
