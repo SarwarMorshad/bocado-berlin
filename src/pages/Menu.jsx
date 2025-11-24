@@ -117,8 +117,8 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Tab Switcher - Food / Drinks */}
-        <div className="bg-[#0f3a36] border-b border-white/10">
+        {/* Tab Switcher - Food / Drinks - STICKY */}
+        <div className="sticky top-0 bg-[#0f3a36] border-b border-white/10 z-20 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-center gap-4 py-4">
               <button
@@ -147,8 +147,8 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="sticky top-0 bg-[#134e4a] shadow-md z-10 border-b border-white/10">
+        {/* Category Filter - STICKY (Below Tabs) */}
+        <div className="sticky top-[88px] bg-[#134e4a] shadow-md z-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
               {currentCategories.map((category) => (
