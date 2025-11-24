@@ -1,238 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { FaShoppingCart } from "react-icons/fa";
+import { MdRestaurant, MdLocalBar } from "react-icons/md";
 
 const Menu = () => {
+  const [activeTab, setActiveTab] = useState("food"); // "food" or "drinks"
   const [activeCategory, setActiveCategory] = useState("all");
+  const [foodData, setFoodData] = useState(null);
+  const [drinksData, setDrinksData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const menuData = {
-    tapasFrias: {
-      title: "Tapas Frías - Kalte Tapas",
-      items: [
-        {
-          id: "01",
-          name: "Pan Con Tomate",
-          description: "Baguette mit geriebener spanischer Bergtomate",
-          price: "6.50",
-        },
-        {
-          id: "02",
-          name: "Olivas Marinadas",
-          description: "Marinierte gemischte Oliven mit frischen Kräutern",
-          price: "6.50",
-        },
-        {
-          id: "03",
-          name: "Serrano Gran Reserva",
-          description: "Serrano schinken 3 Monate gereift",
-          price: "7.90",
-        },
-        {
-          id: "04",
-          name: "Queso De Cabra",
-          description: "Karamelisierter Ziegenkäse mit Honig",
-          price: "7.90",
-        },
-        {
-          id: "05",
-          name: "Queso Manchego",
-          description: "Sechs Monate gereifter Schafskäse",
-          price: "6.90",
-        },
-        {
-          id: "06",
-          name: "Queso De Oveja",
-          description: "Im Ofen gebackener Schafskäse mit Kräutern, Tomaten, Zwiebeln & Knoblauch",
-          price: "7.50",
-        },
-        {
-          id: "25",
-          name: "Plato de BOCADO",
-          description:
-            "Kulinarische Reise mit verschieden Käse und Schinkensorte, Obst, Oliven, Marmelade, Honig, Nüssen",
-          price: "24.90",
-        },
-      ],
-    },
-    tapasCalientes: {
-      title: "Tapas Calientes - Warme Tapas",
-      items: [
-        {
-          id: "30",
-          name: "Pimientos de Padrón",
-          description: "Kleine pikante frittierte Paprikas mit Meersalz",
-          price: "7.50",
-        },
-        {
-          id: "31",
-          name: "Patatas Bravas",
-          description: "Frittierte pikante Kartoffelstücke mit Tomaten - Chili - Sauce",
-          price: "6.90",
-        },
-        {
-          id: "32",
-          name: "Dátiles con y tocino",
-          description: "Datteln im Speckmantel",
-          price: "7.90",
-        },
-        {
-          id: "33",
-          name: "Champignons al ajillo",
-          description: "Gebratene Champignons mit Knoblauch und Petersillien",
-          price: "6.90",
-        },
-        {
-          id: "34",
-          name: "Calamares Pequeños",
-          description: "Panierte und frittierte Baby - Calamares mit Zitrone",
-          price: "8.90",
-        },
-        {
-          id: "35",
-          name: "Gambas a la Tempura con Torzo de Limón",
-          description: "Große Garnelen im Tempurateig mit frischer Zitrone",
-          price: "7.50",
-        },
-        {
-          id: "36",
-          name: "Pulpo a la gallega",
-          description: "Gegrillter Pulpo mit Kartoffeln",
-          price: "9.90",
-        },
-      ],
-    },
-    sopas: {
-      title: "Sopas - Souppen",
-      items: [
-        {
-          id: "51",
-          name: "Sopa de Tomate",
-          description: "Frischen Tomaten Suppe mit Basilikum & Butter- Croutons und Parmesan",
-          price: "6.90",
-        },
-      ],
-    },
-    ensaladas: {
-      title: "Ensalada - Salate",
-      items: [
-        {
-          id: "55",
-          name: "Ensalada Mixta",
-          description: "Gemischter Salat mit Gurke, Tomaten, Paprika und Oliven",
-          price: "6.90",
-        },
-        {
-          id: "57",
-          name: "Ensalada con Queso de Cabra",
-          description:
-            "Gemischter Salat mit glasiertem & gebackenem Honig-Ziegenkäse,Tomaten, Gurke, Paprika, Mais und Oliven in Hausdressing",
-          price: "13.90",
-        },
-      ],
-    },
-    nachos: {
-      title: "Nachos",
-      items: [
-        {
-          id: "61",
-          name: "Nachos con queso",
-          description: "MaisTortilla Chips, überbacken mit Cheddar-Mozzarella Käse, dazu Salsa Dip",
-          price: "10.90",
-        },
-        {
-          id: "62",
-          name: "Nachos BOCADO",
-          description:
-            "MaisTortilla Chips mit Zwiebeln, Tomaten, Koriander, überbacken mit Cheddar-Mozzarella Käse, dazu Sauerrahm, Guacamole",
-          price: "12.90",
-        },
-      ],
-    },
-    especialidades: {
-      title: "Especialidades - Speczialitäten",
-      items: [
-        {
-          id: "70",
-          name: "Paella de Mariscos",
-          description:
-            "Klassisches, spanisches Reisgericht mit Safran, frischem Gemüse, Meeresfrüchten und 2 Großgarnelen",
-          price: "17.90",
-        },
-        {
-          id: "71",
-          name: "Gambas Al ajillo",
-          description:
-            "5 Stück Größen garnelen in Knoblauch - Weißwein-Öl, Petersilie und frischen Chilischoten",
-          price: "14.90",
-        },
-        {
-          id: "72",
-          name: "Fajitas de Verduras",
-          description:
-            "Verschieden Gemüse mit Zwiebeln, Paprika und Knoblauch in einer heißen Pfanne, dazu Salsa, Guacamole, Sauerrahm und 3 Tortillabrote",
-          price: "16.90",
-        },
-        {
-          id: "73",
-          name: "Fajitas con Pollo",
-          description:
-            "Hähnchenbrustwürfel mit Zwiebeln, Paprika und Knoblauch in einer heißen Pfanne, dazu Salsa, Guacamole, Sauerrahm und 3 Tortillabrote",
-          price: "17.90",
-        },
-        {
-          id: "78",
-          name: "Mango con Pollo",
-          description:
-            "Gebratene Hähnchenbrustwürfel in Mango-Sahnesauce, mit Walnüssen und Mandeln, serviert mit Spanischem Reis",
-          price: "18.90",
-        },
-        {
-          id: "80",
-          name: "Steak A la BOCADO",
-          description:
-            "220gm gegrilltes Argentinisches Rumpsteak mit Kräuterbutter, Gemüse, gerösteten Zwiebeln, Rosmarinkartoffeln und Salatbeilage",
-          price: "24.90",
-        },
-        {
-          id: "81",
-          name: "Filete de lomo de Cerdo",
-          description:
-            "2 Stück gegrilltes Schweinerückensteak in Champignon-sahnesauce mit spanischen Kartoffelstücken und Salatbeilage",
-          price: "18.90",
-        },
-      ],
-    },
-    kids: {
-      title: "Para niños - Für Kinder",
-      items: [
-        {
-          id: "100",
-          name: "Nuggets de Pollo",
-          description: "5 Hausgemachte Hähnchenbrustfilet paniert, mit Pommes",
-          price: "8.90",
-        },
-      ],
-    },
-    postres: {
-      title: "Postres - Nachspeisen",
-      items: [
-        {
-          id: "110",
-          name: "Crema Catalan",
-          description: "Spanische Creme Brulee,\nmit einer festen Karamellschicht überzogen.",
-          price: "7.90",
-        },
-        {
-          id: "111",
-          name: "Churros con chocolate",
-          description: "Klassisches Spanisches Gebäck, dazu Schokoladensoße",
-          price: "8.90",
-        },
-      ],
-    },
-  };
+  // Fetch JSON data from public folder
+  useEffect(() => {
+    const fetchMenuData = async () => {
+      try {
+        setLoading(true);
 
-  const categories = [
+        // Fetch both JSON files from public folder
+        const [foodResponse, drinksResponse] = await Promise.all([
+          fetch("/foodData.json"),
+          fetch("/drinksData.json"),
+        ]);
+
+        if (!foodResponse.ok || !drinksResponse.ok) {
+          throw new Error("Failed to fetch menu data");
+        }
+
+        const food = await foodResponse.json();
+        const drinks = await drinksResponse.json();
+
+        setFoodData(food);
+        setDrinksData(drinks);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error loading menu data:", err);
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchMenuData();
+  }, []);
+
+  const foodCategories = [
     { id: "all", name: "Alles" },
     { id: "tapasFrias", name: "Kalte Tapas" },
     { id: "tapasCalientes", name: "Warme Tapas" },
@@ -244,15 +54,57 @@ const Menu = () => {
     { id: "postres", name: "Nachspeisen" },
   ];
 
-  const filteredMenu = activeCategory === "all" ? Object.values(menuData) : [menuData[activeCategory]];
+  const drinksCategories = [
+    { id: "all", name: "Alles" },
+    { id: "offeneWeine", name: "Offene Weine" },
+    { id: "flascheWein", name: "Flaschenwein" },
+    { id: "spanischSpezial", name: "Spanisch Spezial" },
+    { id: "bier", name: "Bier" },
+    { id: "cocktails", name: "Cocktails" },
+    { id: "alkoholfreieGetranke", name: "Alkoholfrei" },
+    { id: "heisseGetranke", name: "Heiße Getränke" },
+  ];
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setActiveCategory("all");
+  };
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#134e4a] flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#feaa3f] mx-auto mb-4"></div>
+          <p className="text-white text-xl">Menü wird geladen...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="min-h-screen bg-[#134e4a] flex items-center justify-center">
+        <div className="text-center text-white">
+          <h2 className="text-2xl font-bold mb-4">Fehler beim Laden der Speisekarte</h2>
+          <p className="text-gray-300">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  const currentData = activeTab === "food" ? foodData : drinksData;
+  const currentCategories = activeTab === "food" ? foodCategories : drinksCategories;
+  const filteredMenu = activeCategory === "all" ? Object.values(currentData) : [currentData[activeCategory]];
 
   return (
     <>
       <Helmet>
-        <title>Speisekarte</title>
+        <title>Speisekarte - BOCADO Berlin</title>
         <meta
           name="description"
-          content="Entdecken Sie die vielfältige Speisekarte von BOCADO Berlin mit authentischen spanischen Tapas, Spezialitäten und mehr."
+          content="Entdecken Sie die vielfältige Speisekarte von BOCADO Berlin mit authentischen spanischen Tapas, Spezialitäten, Weinen, Bieren und Cocktails."
         />
       </Helmet>
       <div className="min-h-screen bg-[#134e4a]">
@@ -265,11 +117,41 @@ const Menu = () => {
           </div>
         </div>
 
+        {/* Tab Switcher - Food / Drinks */}
+        <div className="bg-[#0f3a36] border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center gap-4 py-4">
+              <button
+                onClick={() => handleTabChange("food")}
+                className={`flex items-center gap-2 px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 ${
+                  activeTab === "food"
+                    ? "bg-[#feaa3f] text-white shadow-lg scale-110"
+                    : "bg-white/10 text-gray-200 hover:bg-white/20"
+                }`}
+              >
+                <MdRestaurant className="text-2xl" />
+                Essen
+              </button>
+              <button
+                onClick={() => handleTabChange("drinks")}
+                className={`flex items-center gap-2 px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 ${
+                  activeTab === "drinks"
+                    ? "bg-[#feaa3f] text-white shadow-lg scale-110"
+                    : "bg-white/10 text-gray-200 hover:bg-white/20"
+                }`}
+              >
+                <MdLocalBar className="text-2xl" />
+                Getränke
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Category Filter */}
         <div className="sticky top-0 bg-[#134e4a] shadow-md z-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
-              {categories.map((category) => (
+              {currentCategories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}

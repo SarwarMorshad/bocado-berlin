@@ -1,0 +1,709 @@
+{
+  "offeneWeine": {
+    "title": "Offene Weine",
+    "items": [
+      {
+        "id": "w01",
+        "name": "Faustino Tempranillo (Rot)",
+        "description": "Region: Navarra, Spanien | Rebsorte: Tempranillo | 0,2l",
+        "price": "7.50"
+      },
+      {
+        "id": "w02",
+        "name": "Vega del Castillo Rosé",
+        "description": "Region: Navarra, Spanien | Rebsorte: Grenache (Garnacha) | 0,2l",
+        "price": "7.50"
+      },
+      {
+        "id": "w03",
+        "name": "Vega del Castillo Chardonnay (Weiß)",
+        "description": "Region: Navarra, Spanien | Rebsorte: Chardonnay | 0,2l",
+        "price": "7.50"
+      },
+      {
+        "id": "w04",
+        "name": "Mas Mascort Brut (Cava)",
+        "description": "Region: Penedès, Katalonien | Rebsorten: Xarel-lo, Parellada, Macabeo | 0,1l",
+        "price": "8.90"
+      },
+      {
+        "id": "w05",
+        "name": "Weinschorle (Rot/Weiß/Rosé)",
+        "description": "0,2l",
+        "price": "6.50"
+      },
+      {
+        "id": "w06",
+        "name": "Alkoholfrei Weißwein",
+        "description": "0,2l",
+        "price": "6.50"
+      },
+      {
+        "id": "w07",
+        "name": "Alkoholfrei Roséwein",
+        "description": "0,2l",
+        "price": "6.50"
+      }
+    ]
+  },
+  "flascheWein": {
+    "title": "Flasche Wein - 0,75l",
+    "items": [
+      {
+        "id": "fw01",
+        "name": "Zapadorado Verdejo (Weiß)",
+        "description": "Region: Rueda, Spanien | Rebsorte: 100% Verdejo",
+        "price": "24.90"
+      },
+      {
+        "id": "fw02",
+        "name": "Vina Albali Semidulce Weiss",
+        "description": "Region: D.O. Valdepeñas | Rebsorte: Verdejo, Sauvignon Blanc",
+        "price": "19.90"
+      },
+      {
+        "id": "fw03",
+        "name": "Terras Gauda O Rosal (Weiß)",
+        "description": "Region: Rias Baixas | Rebsorte: Albariño, Loureira, Caiño Blanco",
+        "price": "69.90"
+      },
+      {
+        "id": "fw04",
+        "name": "Torre Castillo Weiß",
+        "description": "Region: Jumilla, Spanien | Rebsorte: Sauvignon Blanc",
+        "price": "27.90"
+      },
+      {
+        "id": "fw05",
+        "name": "Gran Reboreda weiß",
+        "description": "Region: Ribeiro, Galicien | Rebsorten: Loureiro, Godello, Treixadura",
+        "price": "44.90"
+      },
+      {
+        "id": "fw06",
+        "name": "Finca Manzanos Gran Reserva (Rot)",
+        "description": "Region: Rioja | Rebsorten: Tempranillo, Graciano, Mazuelo",
+        "price": "55.90"
+      },
+      {
+        "id": "fw07",
+        "name": "Monteabellón 14 Meses (Rot)",
+        "description": "Region: Ribera del Duero | Rebsorte: Tempranillo",
+        "price": "81.90"
+      },
+      {
+        "id": "fw08",
+        "name": "Clos de Torribas Reserva (Rot)",
+        "description": "Region: Penedès | Rebsorten: Tempranillo, Cabernet Sauvignon, Merlot",
+        "price": "41.90"
+      },
+      {
+        "id": "fw09",
+        "name": "Marcelino Crianza (Rot)",
+        "description": "Region: D.O.Ca. Rioja | Rebsorte: Tempranillo",
+        "price": "31.90"
+      },
+      {
+        "id": "fw10",
+        "name": "Las Chanas Semidulce (Rot)",
+        "description": "Region: D.O. Toro | Rebsorten: Tempranillo, Garnacha, Malvasía",
+        "price": "24.90"
+      },
+      {
+        "id": "fw11",
+        "name": "Viña Aliaga Lágrima de Garnacha (Rosé)",
+        "description": "Region: Navarra | Rebsorte: 100% Garnacha",
+        "price": "33.90"
+      },
+      {
+        "id": "fw12",
+        "name": "Torre Castillo Rosado",
+        "description": "Region: D.O.P. Jumilla | Rebsorte: Monastrell",
+        "price": "21.90"
+      }
+    ]
+  },
+  "spanischSpezial": {
+    "title": "Spanisch Spezial",
+    "items": [
+      {
+        "id": "ss01",
+        "name": "Sangria",
+        "description": "0,4l / 1l",
+        "price": "8.50 / 20.50"
+      },
+      {
+        "id": "ss02",
+        "name": "Calimocho / Tinto de Verano",
+        "description": "0,4l",
+        "price": "6.90"
+      },
+      {
+        "id": "ss03",
+        "name": "Agua de Valencia",
+        "description": "0,4l",
+        "price": "7.90"
+      }
+    ]
+  },
+  "alkoholfreieGetranke": {
+    "title": "Alkoholfreie Getränke",
+    "items": [
+      {
+        "id": "ag01",
+        "name": "Coca Cola, Fanta, Sprite, Mezzo Mix, Coca Cola Zero",
+        "description": "0,2l",
+        "price": "3.90"
+      },
+      {
+        "id": "ag02",
+        "name": "Schweppes - Ginger Ale, Tonic Water, Bitter Lemon, Wild Berry",
+        "description": "0,2l",
+        "price": "4.10"
+      },
+      {
+        "id": "ag03",
+        "name": "Rixdorfer Fassbrause",
+        "description": "0,33l",
+        "price": "4.20"
+      },
+      {
+        "id": "ag04",
+        "name": "Mondariz Wasser Still",
+        "description": "0,33l / 0,75l",
+        "price": "4.10 / 7.80"
+      },
+      {
+        "id": "ag05",
+        "name": "Mondariz Wasser Sprudel",
+        "description": "0,33l / 0,75l",
+        "price": "4.10 / 7.80"
+      },
+      {
+        "id": "ag06",
+        "name": "Ananassaft",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag07",
+        "name": "Orangensaft",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag08",
+        "name": "Bananen-Nektar",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag09",
+        "name": "Apfelsaft trüb",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag10",
+        "name": "Cranberry Fruit",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag11",
+        "name": "Grapefruitsaft",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag12",
+        "name": "Mango-Nektar",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag13",
+        "name": "Maracuja-Nektar",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag14",
+        "name": "Saftschorle - alle Sorten",
+        "description": "0,3l",
+        "price": "4.50"
+      }
+    ]
+  },
+  "heisseGetranke": {
+    "title": "Heiße Getränke",
+    "items": [
+      {
+        "id": "hg01",
+        "name": "Tee - Darjeeling Summer Leaves",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg02",
+        "name": "Tee - Royal Earl Grey",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg03",
+        "name": "Tee - Grün Matinee",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg04",
+        "name": "Tee - Lemon Mint",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg05",
+        "name": "Tee - Rooibos Vanilla Toffee",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg06",
+        "name": "Tee - Fancy Chamomile",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg07",
+        "name": "Tee - Classic Herbs",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg08",
+        "name": "Tee - Red Fruit Flash",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg09",
+        "name": "Tee - Persischer Apfel",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg10",
+        "name": "Espresso",
+        "description": "Tasse",
+        "price": "3.50"
+      },
+      {
+        "id": "hg11",
+        "name": "Espresso-Doppio",
+        "description": "Tasse",
+        "price": "4.90"
+      },
+      {
+        "id": "hg12",
+        "name": "Espresso Macchiato",
+        "description": "Tasse",
+        "price": "3.90"
+      },
+      {
+        "id": "hg13",
+        "name": "Kaffee",
+        "description": "Tasse",
+        "price": "4.10"
+      },
+      {
+        "id": "hg14",
+        "name": "Cappuccino",
+        "description": "Tasse",
+        "price": "4.50"
+      },
+      {
+        "id": "hg15",
+        "name": "Milchkaffee",
+        "description": "Tasse",
+        "price": "4.90"
+      },
+      {
+        "id": "hg16",
+        "name": "Latte Macchiato",
+        "description": "Glas",
+        "price": "4.90"
+      },
+      {
+        "id": "hg17",
+        "name": "Latte Macchiato mit Flavour",
+        "description": "Glas",
+        "price": "5.90"
+      },
+      {
+        "id": "hg18",
+        "name": "Heiße Schokolade - ohne Sahne",
+        "description": "Glas",
+        "price": "3.90"
+      },
+      {
+        "id": "hg19",
+        "name": "Heiße Schokolade - Mit Sahne",
+        "description": "Glas",
+        "price": "4.40"
+      },
+      {
+        "id": "hg20",
+        "name": "Carajillo",
+        "description": "Glas",
+        "price": "6.70"
+      },
+      {
+        "id": "hg21",
+        "name": "Irish Kaffee",
+        "description": "Glas",
+        "price": "9.90"
+      },
+      {
+        "id": "hg22",
+        "name": "Baileys Kaffee",
+        "description": "Glas",
+        "price": "8.50"
+      },
+      {
+        "id": "hg23",
+        "name": "Grog",
+        "description": "Glas",
+        "price": "6.90"
+      }
+    ]
+  },
+  "bier": {
+    "title": "Bier vom Fass & Flaschen",
+    "items": [
+      {
+        "id": "b01",
+        "name": "San Miguel Lagerbier (Fass)",
+        "description": "0,3l / 0,5l",
+        "price": "4.50 / 5.50"
+      },
+      {
+        "id": "b02",
+        "name": "Augustiner Hell (Fass)",
+        "description": "0,3l / 0,5l",
+        "price": "4.60 / 5.70"
+      },
+      {
+        "id": "b03",
+        "name": "Crew IPA Drunken Sailor (Fass)",
+        "description": "0,3l / 0,5l",
+        "price": "4.60 / 5.70"
+      },
+      {
+        "id": "b04",
+        "name": "Alsterwasser/Radler (Fass)",
+        "description": "0,3l / 0,5l",
+        "price": "4.50 / 5.50"
+      },
+      {
+        "id": "b05",
+        "name": "Estrella Galicia Cerveza",
+        "description": "0,33l Flasche",
+        "price": "4.90"
+      },
+      {
+        "id": "b06",
+        "name": "Alhambra Reserva",
+        "description": "0,33l Flasche",
+        "price": "4.90"
+      },
+      {
+        "id": "b07",
+        "name": "Estrella Galicia 0,0% - Alkoholfrei",
+        "description": "0,33l Flasche",
+        "price": "4.20"
+      },
+      {
+        "id": "b08",
+        "name": "Corona Extra",
+        "description": "0,33l Flasche",
+        "price": "4.50"
+      },
+      {
+        "id": "b09",
+        "name": "Corona Cero 0,0% - Alkoholfrei",
+        "description": "0,33l Flasche",
+        "price": "4.20"
+      },
+      {
+        "id": "b10",
+        "name": "Desperados",
+        "description": "0,33l Flasche",
+        "price": "4.50"
+      },
+      {
+        "id": "b11",
+        "name": "Heineken",
+        "description": "0,33l Flasche",
+        "price": "4.20"
+      },
+      {
+        "id": "b12",
+        "name": "Franziskaner Weissbier-Hefe",
+        "description": "0,5l",
+        "price": "5.60"
+      },
+      {
+        "id": "b13",
+        "name": "Franziskaner Weissbier-Dunkel",
+        "description": "0,5l",
+        "price": "5.60"
+      },
+      {
+        "id": "b14",
+        "name": "Franziskaner Weissbier-Alkoholfrei",
+        "description": "0,5l",
+        "price": "5.60"
+      },
+      {
+        "id": "b15",
+        "name": "Franziskaner Weissbier-Kristallklar",
+        "description": "0,5l",
+        "price": "5.60"
+      }
+    ]
+  },
+  "cocktails": {
+    "title": "Cóctel - Cocktails",
+    "items": [
+      {
+        "id": "c01",
+        "name": "Mojito",
+        "description": "Weißer Rum, Brauner Rum, frische Minze, Limette, Rohrzucker, Soda",
+        "price": "8.90"
+      },
+      {
+        "id": "c02",
+        "name": "Caipirinha",
+        "description": "Cachaça, Limette, Rohrzucker (Normal, mit Erdbeer, Mango)",
+        "price": "8.90"
+      },
+      {
+        "id": "c03",
+        "name": "Caipiroska",
+        "description": "Wodka, Limette, Rohrzucker (Normal, mit Erdbeer, Mango)",
+        "price": "8.90"
+      },
+      {
+        "id": "c04",
+        "name": "Hurrican",
+        "description": "Weißer Rum, Brauner Rum, Maracujasirup, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c05",
+        "name": "Bahama Mama",
+        "description": "Weißer Rum, Brauner Rum, Malibu, Bananennektar, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c06",
+        "name": "Flamingo",
+        "description": "Weißer Rum, Brauner Rum, Cherry Brandy, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c07",
+        "name": "Sex on the Beach",
+        "description": "Wodka, Peach Tree, Watermelon Likör, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c08",
+        "name": "Watermelonman",
+        "description": "Wodka, Watermelon Likör, Zitronensaft, Orangensaft, Grenadine",
+        "price": "8.90"
+      },
+      {
+        "id": "c09",
+        "name": "Cosmopolitan",
+        "description": "Wodka, Cointreau, Limettensaft, Cranberrysaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c10",
+        "name": "Wodka Solero",
+        "description": "Wodka, Vanillesirup, Zitronensaft, Maracujanektar",
+        "price": "8.90"
+      },
+      {
+        "id": "c11",
+        "name": "Wodka Tai",
+        "description": "Wodka, Mandelsirup, Apricot Brandy, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c12",
+        "name": "Espresso Martini",
+        "description": "Wodka, Kahlua, Espresso, Rohrzuckersirup",
+        "price": "8.90"
+      },
+      {
+        "id": "c13",
+        "name": "Gin Tai",
+        "description": "Gin, Mandelsirup, Apricot Brandy, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c14",
+        "name": "Singapore Sling",
+        "description": "Gin, Cherry Brandy, Lime Juice, Rohrzuckersirup, Soda",
+        "price": "8.90"
+      },
+      {
+        "id": "c15",
+        "name": "Gin & Sin",
+        "description": "Gin, Zitronensaft, Orangensaft, Grenadine",
+        "price": "8.90"
+      },
+      {
+        "id": "c16",
+        "name": "Gigolo - Gin",
+        "description": "Gin, Peach Tree, Zitronensaft, Orangensaft, Grenadine",
+        "price": "8.90"
+      },
+      {
+        "id": "c17",
+        "name": "Gin Fizz",
+        "description": "Gin, Rohrzuckersirup, Zitronensaft, Soda",
+        "price": "8.90"
+      },
+      {
+        "id": "c18",
+        "name": "Tequila Sunrise",
+        "description": "Tequila, Zitronensaft, Orangensaft, Grenadine",
+        "price": "8.90"
+      },
+      {
+        "id": "c19",
+        "name": "I love You",
+        "description": "Tequila, Säfte, Mangosirup, Maracujanektar, Grenadine",
+        "price": "8.90"
+      },
+      {
+        "id": "c20",
+        "name": "BOCADO Lover",
+        "description": "Tequila, Blue Curacao Sirup, Mango Sirup, Säfte",
+        "price": "8.90"
+      },
+      {
+        "id": "c21",
+        "name": "Coco Tree",
+        "description": "Tequila, Cachaça, Zitronensaft, Kokossirup, Ananassaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c22",
+        "name": "Hemingway Sour",
+        "description": "Gin, Zitronensaft, Orangensaft, Grenadine",
+        "price": "8.90"
+      },
+      {
+        "id": "c23",
+        "name": "Aperol Sour",
+        "description": "Aperol, Rohrzuckersirup, Zitronensaft, Orangensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c24",
+        "name": "Whisky Sour",
+        "description": "Whisky, Rohrzuckersirup, Zitronensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c25",
+        "name": "Wodka Sour",
+        "description": "Wodka, Rohrzuckersirup, Zitronensaft, Orangensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c26",
+        "name": "Amaretto Sour",
+        "description": "Amaretto, Rohrzuckersirup, Orangensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c27",
+        "name": "Mai Tai",
+        "description": "Weißer Rum, Brauner Rum, Old Pascas 73%, Apricot Brandy, Mandelsirup",
+        "price": "10.90"
+      },
+      {
+        "id": "c28",
+        "name": "Long Island Ice Tea",
+        "description": "Wodka, Weißer Rum, Gin, Triple Sec, Coca-Cola",
+        "price": "10.90"
+      },
+      {
+        "id": "c29",
+        "name": "Adios Amigo",
+        "description": "Gin, Tequila, Weißer Rum, Säfte, Red Bull",
+        "price": "10.90"
+      },
+      {
+        "id": "c30",
+        "name": "Zombie",
+        "description": "Weißer Rum, Brauner Rum, Old Pascas 73%, Cherry Brandy, Säfte",
+        "price": "10.90"
+      },
+      {
+        "id": "c31",
+        "name": "Feel BOCADO",
+        "description": "Wodka, Gin, Weißer Rum, Tequila, Blue Curacao, Mangosirup, Sprite",
+        "price": "10.90"
+      },
+      {
+        "id": "c32",
+        "name": "White Russian",
+        "description": "Wodka, Kahlua, Sahne",
+        "price": "8.90"
+      },
+      {
+        "id": "c33",
+        "name": "Piña Colada",
+        "description": "Weißer Rum, Kokossirup, Sahne, Ananassaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c34",
+        "name": "Erdbeer Colada",
+        "description": "Weißer Rum, Erdbeersirup, Sahne, Ananassaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c35",
+        "name": "Mango Colada",
+        "description": "Weißer Rum, Mangosirup, Mangopüree, Sahne, Ananassaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c36",
+        "name": "Swimming Pool",
+        "description": "Vodka, Blue Curacao, Sahne, Ananassaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c37",
+        "name": "Flying Cangaroo",
+        "description": "Weißer Rum, Wodka, Galliano, Kokossirup, Sahne, Ananassaft",
+        "price": "8.90"
+      },
+      {
+        "id": "c38",
+        "name": "BOCADO Colada",
+        "description": "Wodka, Kokossirup, Kahlua, Sahne, Vanillesirup, Säfte",
+        "price": "8.90"
+      }
+    ]
+  }
+}
