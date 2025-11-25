@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import { MdRestaurant, MdLocalBar } from "react-icons/md";
+import { MdRestaurant, MdLocalBar, MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const Menu = () => {
   const [activeTab, setActiveTab] = useState("food"); // "food" or "drinks"
@@ -9,6 +9,10 @@ const Menu = () => {
   const [drinksData, setDrinksData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+
+  const scrollContainerRef = useRef(null);
 
   // Fetch JSON data from public folder
   useEffect(() => {
@@ -42,6 +46,42 @@ const Menu = () => {
     fetchMenuData();
   }, []);
 
+  // Check scroll position to show/hide arrows
+  const checkScrollPosition = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setShowLeftArrow(scrollLeft > 0);
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  // Scroll categories
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300;
+      const newScrollLeft =
+        scrollContainerRef.current.scrollLeft + (direction === "left" ? -scrollAmount : scrollAmount);
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Check scroll position on mount and when categories change
+  useEffect(() => {
+    checkScrollPosition();
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", checkScrollPosition);
+      window.addEventListener("resize", checkScrollPosition);
+      return () => {
+        container.removeEventListener("scroll", checkScrollPosition);
+        window.removeEventListener("resize", checkScrollPosition);
+      };
+    }
+  }, [activeTab]);
+
   const foodCategories = [
     { id: "all", name: "Alles" },
     { id: "tapasFrias", name: "Kalte Tapas" },
@@ -59,10 +99,24 @@ const Menu = () => {
     { id: "offeneWeine", name: "Offene Weine" },
     { id: "flascheWein", name: "Flaschenwein" },
     { id: "spanischSpezial", name: "Spanisch Spezial" },
-    { id: "bier", name: "Bier" },
-    { id: "cocktails", name: "Cocktails" },
     { id: "alkoholfreieGetranke", name: "Alkoholfrei" },
     { id: "heisseGetranke", name: "Heiße Getränke" },
+    { id: "bier", name: "Bier" },
+    { id: "cocktailsNormal", name: "Cocktails" },
+    { id: "cocktailsHigh", name: "High Cocktails" },
+    { id: "cocktailsSahne", name: "Sahne Cocktails" },
+    { id: "cocktailsAlkoholfrei", name: "Alkoholfrei Cocktails" },
+    { id: "margaritasDaiquiris", name: "Margaritas/Daiquiris" },
+    { id: "longDrinks", name: "Long Drinks" },
+    { id: "longDrinks4cl", name: "Long Drinks 4cl" },
+    { id: "shots", name: "Shots" },
+    { id: "tequila", name: "Tequila" },
+    { id: "rum", name: "Rum" },
+    { id: "whisky", name: "Whisky" },
+    { id: "brandyCognac", name: "Brandy & Cognac" },
+    { id: "gin", name: "Gin" },
+    { id: "vodka", name: "Vodka" },
+    { id: "liqueurs", name: "Liqueurs" },
   ];
 
   const handleTabChange = (tab) => {
@@ -113,7 +167,7 @@ const Menu = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
             <h1 className="text-5xl font-bold mb-4">Menú</h1>
             <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
-            <p className="text-3xl mt-2 text-primary">Especial de gran inauguración</p>
+            <p className="text-3xl mt-2 text-[#feaa3f]">Especial de gran inauguración</p>
           </div>
         </div>
 
@@ -147,23 +201,56 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Category Filter - STICKY (Below Tabs) */}
+        {/* Category Filter - STICKY (Below Tabs) - WITH ARROW BUTTONS */}
         <div className="sticky top-[88px] bg-[#134e4a] shadow-md z-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
-              {currentCategories.map((category) => (
+            <div className="relative">
+              {/* Left Arrow Button */}
+              {showLeftArrow && (
                 <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 transform hover:scale-105 ${
-                    activeCategory === category.id
-                      ? "bg-[#feaa3f] text-white shadow-lg scale-105"
-                      : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
-                  }`}
+                  onClick={() => scroll("left")}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#0f3a36] hover:bg-[#feaa3f] text-white p-2 rounded-full shadow-lg transition-all duration-300"
+                  aria-label="Scroll left"
                 >
-                  {category.name}
+                  <MdChevronLeft className="text-2xl" />
                 </button>
-              ))}
+              )}
+
+              {/* Scrollable Categories */}
+              <div
+                ref={scrollContainerRef}
+                className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide scroll-smooth px-10"
+                style={{
+                  scrollbarWidth: "none",
+                  msOverflowStyle: "none",
+                  WebkitOverflowScrolling: "touch",
+                }}
+              >
+                {currentCategories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 transform hover:scale-105 flex-shrink-0 ${
+                      activeCategory === category.id
+                        ? "bg-[#feaa3f] text-white shadow-lg scale-105"
+                        : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Right Arrow Button */}
+              {showRightArrow && (
+                <button
+                  onClick={() => scroll("right")}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#0f3a36] hover:bg-[#feaa3f] text-white p-2 rounded-full shadow-lg transition-all duration-300"
+                  aria-label="Scroll right"
+                >
+                  <MdChevronRight className="text-2xl" />
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -184,7 +271,9 @@ const Menu = () => {
                   >
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-xl font-semibold text-white">{item.name}</h3>
-                      <span className="text-2xl font-bold text-[#feaa3f]">€{item.price}</span>
+                      <span className="text-2xl font-bold text-[#feaa3f] whitespace-nowrap ml-2">
+                        €{item.price}
+                      </span>
                     </div>
                     <p className="text-gray-200 text-sm mb-4 leading-relaxed">{item.description}</p>
                   </div>
@@ -194,6 +283,17 @@ const Menu = () => {
           ))}
         </div>
       </div>
+
+      {/* Hide scrollbar CSS */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </>
   );
 };

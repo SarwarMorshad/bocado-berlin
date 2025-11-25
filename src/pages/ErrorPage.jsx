@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaHome, FaUtensils, FaPhone, FaExclamationTriangle } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const ErrorPage = () => {
   return (

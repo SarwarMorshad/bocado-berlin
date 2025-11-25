@@ -229,6 +229,24 @@
       },
       {
         "id": "ag14",
+        "name": "Pink-Grapefruit Saft",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag15",
+        "name": "Rhabarber-Nektar",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag16",
+        "name": "Sauerkirsch klar",
+        "description": "0,3l",
+        "price": "4.90"
+      },
+      {
+        "id": "ag17",
         "name": "Saftschorle - alle Sorten",
         "description": "0,3l",
         "price": "4.50"
@@ -473,25 +491,25 @@
       }
     ]
   },
-  "cocktails": {
-    "title": "Cóctel - Cocktails",
+  "cocktailsNormal": {
+    "title": "Cóctel - Normale Cocktails",
     "items": [
       {
         "id": "c01",
-        "name": "Mojito",
-        "description": "Weißer Rum, Brauner Rum, frische Minze, Limette, Rohrzucker, Soda",
+        "name": "Caipirinha",
+        "description": "Normal, mit Erdbeer, Mango - Cachaça, Limette, Rohrzucker",
         "price": "8.90"
       },
       {
         "id": "c02",
-        "name": "Caipirinha",
-        "description": "Cachaça, Limette, Rohrzucker (Normal, mit Erdbeer, Mango)",
+        "name": "Caipiroska",
+        "description": "Normal, mit Erdbeer, Mango - Wodka, Limette, Rohrzucker",
         "price": "8.90"
       },
       {
         "id": "c03",
-        "name": "Caipiroska",
-        "description": "Wodka, Limette, Rohrzucker (Normal, mit Erdbeer, Mango)",
+        "name": "Mojito",
+        "description": "Normal, mit Erdbeer, Mango - Weißer Rum, Brauner Rum, frische Minze, Limette, Rohrzucker, Soda",
         "price": "8.90"
       },
       {
@@ -631,78 +649,724 @@
         "name": "Amaretto Sour",
         "description": "Amaretto, Rohrzuckersirup, Orangensaft",
         "price": "8.90"
-      },
+      }
+    ]
+  },
+  "cocktailsHigh": {
+    "title": "Cóctel - High Cocktails",
+    "items": [
       {
-        "id": "c27",
+        "id": "ch01",
         "name": "Mai Tai",
         "description": "Weißer Rum, Brauner Rum, Old Pascas 73%, Apricot Brandy, Mandelsirup",
         "price": "10.90"
       },
       {
-        "id": "c28",
+        "id": "ch02",
         "name": "Long Island Ice Tea",
         "description": "Wodka, Weißer Rum, Gin, Triple Sec, Coca-Cola",
         "price": "10.90"
       },
       {
-        "id": "c29",
+        "id": "ch03",
         "name": "Adios Amigo",
         "description": "Gin, Tequila, Weißer Rum, Säfte, Red Bull",
         "price": "10.90"
       },
       {
-        "id": "c30",
+        "id": "ch04",
         "name": "Zombie",
         "description": "Weißer Rum, Brauner Rum, Old Pascas 73%, Cherry Brandy, Säfte",
         "price": "10.90"
       },
       {
-        "id": "c31",
+        "id": "ch05",
         "name": "Feel BOCADO",
         "description": "Wodka, Gin, Weißer Rum, Tequila, Blue Curacao, Mangosirup, Sprite",
         "price": "10.90"
-      },
+      }
+    ]
+  },
+  "cocktailsSahne": {
+    "title": "Cóctel - Sahne Cocktails",
+    "items": [
       {
-        "id": "c32",
+        "id": "cs01",
         "name": "White Russian",
         "description": "Wodka, Kahlua, Sahne",
         "price": "8.90"
       },
       {
-        "id": "c33",
+        "id": "cs02",
         "name": "Piña Colada",
         "description": "Weißer Rum, Kokossirup, Sahne, Ananassaft",
         "price": "8.90"
       },
       {
-        "id": "c34",
+        "id": "cs03",
         "name": "Erdbeer Colada",
         "description": "Weißer Rum, Erdbeersirup, Sahne, Ananassaft",
         "price": "8.90"
       },
       {
-        "id": "c35",
+        "id": "cs04",
         "name": "Mango Colada",
         "description": "Weißer Rum, Mangosirup, Mangopüree, Sahne, Ananassaft",
         "price": "8.90"
       },
       {
-        "id": "c36",
+        "id": "cs05",
         "name": "Swimming Pool",
         "description": "Vodka, Blue Curacao, Sahne, Ananassaft",
         "price": "8.90"
       },
       {
-        "id": "c37",
+        "id": "cs06",
         "name": "Flying Cangaroo",
         "description": "Weißer Rum, Wodka, Galliano, Kokossirup, Sahne, Ananassaft",
         "price": "8.90"
       },
       {
-        "id": "c38",
+        "id": "cs07",
         "name": "BOCADO Colada",
         "description": "Wodka, Kokossirup, Kahlua, Sahne, Vanillesirup, Säfte",
         "price": "8.90"
+      }
+    ]
+  },
+  "cocktailsAlkoholfrei": {
+    "title": "Alkoholfrei Cocktails",
+    "items": [
+      {
+        "id": "ca01",
+        "name": "Coconut Kiss",
+        "description": "Kokossirup, Sahne, Ananassaft, Kirschsaft",
+        "price": "6.90"
+      },
+      {
+        "id": "ca02",
+        "name": "Erdbeer Kiss",
+        "description": "Erdbeerpüree, Kokossirup, Erdbeersirup, Sahne, Ananassaft",
+        "price": "6.90"
+      },
+      {
+        "id": "ca03",
+        "name": "Mango Kiss",
+        "description": "Mangopüree, Kokossirup, Sahne, Mangosirup, Ananassaft",
+        "price": "6.90"
+      },
+      {
+        "id": "ca04",
+        "name": "Mosquito",
+        "description": "Limetten, Brauner Zucker, Minze, Tonic wasser",
+        "price": "6.90"
+      },
+      {
+        "id": "ca05",
+        "name": "Ipanema",
+        "description": "Limetten, Brauner zucker, Ginger Ale",
+        "price": "6.90"
+      },
+      {
+        "id": "ca06",
+        "name": "Bora Bora Brew",
+        "description": "Grenadine, Ananassaft, Ginger Ale",
+        "price": "6.90"
+      },
+      {
+        "id": "ca07",
+        "name": "BOCADO Vibe",
+        "description": "Mangosirup, Blu Curacao, Zitronensaft, Ananassaft",
+        "price": "6.90"
+      }
+    ]
+  },
+  "margaritasDaiquiris": {
+    "title": "Margaritas / Daiquiris",
+    "items": [
+      {
+        "id": "md01",
+        "name": "Classic Margarita",
+        "description": "Tequila, Zuckersirup, Triple Sec, Limettensaft, Zitronensaft, Salzrand",
+        "price": "8.90"
+      },
+      {
+        "id": "md02",
+        "name": "Erdbeer Margarita",
+        "description": "Tequila, Erdbeerpüree, Triple Sec, Limettensaft, Zitronensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "md03",
+        "name": "Mango Margarita",
+        "description": "Tequila, Mangopüree, Triple Sec, Limettensaft, Zitronensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "md04",
+        "name": "Frozen Classic Daiquiri",
+        "description": "Weißer Rum, Zuckersirup, Limettensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "md05",
+        "name": "Frozen Daiquiri de Fresa",
+        "description": "Weißer Rum, Erdbeerpüree, Zuckersirup, Limettensaft",
+        "price": "8.90"
+      },
+      {
+        "id": "md06",
+        "name": "Frozen Daiquiri de Mango",
+        "description": "Weißer Rum, Mangopüree, Zuckersirup, Limettensaft",
+        "price": "8.90"
+      }
+    ]
+  },
+  "longDrinks": {
+    "title": "Long Drinks",
+    "items": [
+      {
+        "id": "ld01",
+        "name": "Strawberry Fields",
+        "description": "Prosecco, Apricot Brandy, Erdebeerpürree",
+        "price": "7.90"
+      },
+      {
+        "id": "ld02",
+        "name": "French Love",
+        "description": "Gin, Prosecco, Grenadine",
+        "price": "7.90"
+      },
+      {
+        "id": "ld03",
+        "name": "Aperol Spritz",
+        "description": "Aperol, Prosecco, Sprudelwasser",
+        "price": "7.90"
+      },
+      {
+        "id": "ld04",
+        "name": "Campari Spritz",
+        "description": "Campari, Prosecco, Sprudelwasser",
+        "price": "7.90"
+      },
+      {
+        "id": "ld05",
+        "name": "Hugo",
+        "description": "Limetten, Minze, Holundersirup, Prosecco, Sprudelwasser",
+        "price": "7.90"
+      },
+      {
+        "id": "ld06",
+        "name": "Lillet Berry",
+        "description": "Lillet Blanc, Schweppes Wildberry",
+        "price": "7.90"
+      },
+      {
+        "id": "ld07",
+        "name": "Sarti Spritz",
+        "description": "Sarti Rosa, Prosecco, Sprudelwasser",
+        "price": "7.90"
+      },
+      {
+        "id": "ld08",
+        "name": "Sarti Lemon Spritz",
+        "description": "Sarti Rosa, Grapefruitsaft, Bitter Lemon",
+        "price": "7.90"
+      }
+    ]
+  },
+  "longDrinks4cl": {
+    "title": "Long Drinks 4cl",
+    "items": [
+      {
+        "id": "ld4-01",
+        "name": "Cuba Libre",
+        "description": "Havana Club, Limetten, Coca-Cola",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-02",
+        "name": "Wodka",
+        "description": "Lemon / Tonic / Wildberry / Orange / Cranberry",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-03",
+        "name": "Jäger Bull",
+        "description": "Jägermeister, Red Bull",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-04",
+        "name": "Malibu",
+        "description": "Maracuja / Orange / Kirsch",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-05",
+        "name": "Batida de Coco",
+        "description": "Kirsch / Orange / Maracuja",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-06",
+        "name": "Gin",
+        "description": "Tonic / Wildberry",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-07",
+        "name": "Southern Ale",
+        "description": "Southern Comfort, Ginger Ale",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-08",
+        "name": "Moscow Mule",
+        "description": "Wodka, Ingwersirup, Limetten, Gurke, frische Minze",
+        "price": "8.90"
+      },
+      {
+        "id": "ld4-09",
+        "name": "Whisky Cola",
+        "description": "Jack Daniels / Jim Beam / Jameson / Tullamore, Coca-cola",
+        "price": "10.90"
+      },
+      {
+        "id": "ld4-10",
+        "name": "Havana Club",
+        "description": "7 Jahre, Coca-cola",
+        "price": "10.90"
+      },
+      {
+        "id": "ld4-11",
+        "name": "Bacardi",
+        "description": "Coca-cola / Sprite",
+        "price": "10.90"
+      },
+      {
+        "id": "ld4-12",
+        "name": "Jameson Ale",
+        "description": "Jameson Whisky, Ginge Ale",
+        "price": "10.90"
+      }
+    ]
+  },
+  "shots": {
+    "title": "Shots 4cl",
+    "items": [
+      {
+        "id": "sh01",
+        "name": "Woodini",
+        "description": "Vodka, Bitter Lemon",
+        "price": "5.50"
+      },
+      {
+        "id": "sh02",
+        "name": "B51",
+        "description": "Kahlua, Galliano, Baileys",
+        "price": "5.50"
+      },
+      {
+        "id": "sh03",
+        "name": "B52",
+        "description": "Kahlua, Baileys, Rum 73",
+        "price": "5.50"
+      },
+      {
+        "id": "sh04",
+        "name": "Kamikaze",
+        "description": "Wodka, Lime, Zuckersirup",
+        "price": "5.50"
+      },
+      {
+        "id": "sh05",
+        "name": "Orgasmus",
+        "description": "Sambuca, Baileys",
+        "price": "5.50"
+      },
+      {
+        "id": "sh06",
+        "name": "Brain",
+        "description": "Peach Tree, Baileys, Grenadine",
+        "price": "5.50"
+      },
+      {
+        "id": "sh07",
+        "name": "Hemingway",
+        "description": "Gin, Zitronensaft, Grenadin, Orangensaft",
+        "price": "5.50"
+      }
+    ]
+  },
+  "tequila": {
+    "title": "Tequila 2cl",
+    "items": [
+      {
+        "id": "tq01",
+        "name": "Olmeca Blanco",
+        "description": "",
+        "price": "4.50"
+      },
+      {
+        "id": "tq02",
+        "name": "Olmeca Reposado",
+        "description": "",
+        "price": "4.50"
+      },
+      {
+        "id": "tq03",
+        "name": "Sierra Silver",
+        "description": "",
+        "price": "3.90"
+      },
+      {
+        "id": "tq04",
+        "name": "Sierra Reposado",
+        "description": "",
+        "price": "3.90"
+      },
+      {
+        "id": "tq05",
+        "name": "José Cuervo Blanco",
+        "description": "",
+        "price": "4.50"
+      },
+      {
+        "id": "tq06",
+        "name": "José Cuervo Reposado",
+        "description": "",
+        "price": "4.50"
+      },
+      {
+        "id": "tq07",
+        "name": "Dos Maz - Tequila-Likör mit Zimt",
+        "description": "",
+        "price": "4.50"
+      },
+      {
+        "id": "tq08",
+        "name": "Cuervo 1800 Reposado (100% Agave)",
+        "description": "",
+        "price": "5.90"
+      },
+      {
+        "id": "tq09",
+        "name": "Cuervo 1800 Blanco (100% Agave)",
+        "description": "",
+        "price": "5.90"
+      }
+    ]
+  },
+  "rum": {
+    "title": "Rum 2cl",
+    "items": [
+      {
+        "id": "rum01",
+        "name": "Havana Club 3 Jahre",
+        "description": "",
+        "price": "4.90"
+      },
+      {
+        "id": "rum02",
+        "name": "Havana Club 7 Jahre",
+        "description": "",
+        "price": "6.90"
+      },
+      {
+        "id": "rum03",
+        "name": "Bacardi White",
+        "description": "",
+        "price": "4.90"
+      },
+      {
+        "id": "rum04",
+        "name": "Captain Morgan",
+        "description": "",
+        "price": "4.90"
+      }
+    ]
+  },
+  "whisky": {
+    "title": "Whisky 4cl",
+    "items": [
+      {
+        "id": "wh01",
+        "name": "Jim Beam",
+        "description": "",
+        "price": "8.50"
+      },
+      {
+        "id": "wh02",
+        "name": "Jack Daniels",
+        "description": "",
+        "price": "9.50"
+      },
+      {
+        "id": "wh03",
+        "name": "Johnnie Walker Black",
+        "description": "",
+        "price": "10.50"
+      },
+      {
+        "id": "wh04",
+        "name": "Chivas Regal 12 Years",
+        "description": "",
+        "price": "10.50"
+      },
+      {
+        "id": "wh05",
+        "name": "Glenfiddich 12 Jahre",
+        "description": "",
+        "price": "10.50"
+      },
+      {
+        "id": "wh06",
+        "name": "Jameson",
+        "description": "",
+        "price": "8.90"
+      },
+      {
+        "id": "wh07",
+        "name": "Tullamore Dew",
+        "description": "",
+        "price": "8.90"
+      }
+    ]
+  },
+  "brandyCognac": {
+    "title": "Brandy u. Cognac 2cl",
+    "items": [
+      {
+        "id": "bc01",
+        "name": "Hennessy",
+        "description": "",
+        "price": "6.50"
+      },
+      {
+        "id": "bc02",
+        "name": "Remy Martin V.S.O.P",
+        "description": "",
+        "price": "6.50"
+      },
+      {
+        "id": "bc03",
+        "name": "Osborne Veterano",
+        "description": "",
+        "price": "5.50"
+      },
+      {
+        "id": "bc04",
+        "name": "Asbach Uralt",
+        "description": "",
+        "price": "5.50"
+      },
+      {
+        "id": "bc05",
+        "name": "Carlos Primera",
+        "description": "",
+        "price": "5.50"
+      }
+    ]
+  },
+  "gin": {
+    "title": "Gin 2cl",
+    "items": [
+      {
+        "id": "gin01",
+        "name": "Gordon's Dry Gin",
+        "description": "",
+        "price": "4.90"
+      },
+      {
+        "id": "gin02",
+        "name": "Bombay Sapphire",
+        "description": "",
+        "price": "5.90"
+      },
+      {
+        "id": "gin03",
+        "name": "Tanqueray Dry Gin",
+        "description": "",
+        "price": "6.90"
+      },
+      {
+        "id": "gin04",
+        "name": "Hendrick's",
+        "description": "",
+        "price": "6.90"
+      },
+      {
+        "id": "gin05",
+        "name": "Panarea Island",
+        "description": "",
+        "price": "5.90"
+      }
+    ]
+  },
+  "vodka": {
+    "title": "Vodka 2cl",
+    "items": [
+      {
+        "id": "vod01",
+        "name": "Absolut",
+        "description": "",
+        "price": "4.90"
+      },
+      {
+        "id": "vod02",
+        "name": "Three Sixty",
+        "description": "",
+        "price": "4.90"
+      },
+      {
+        "id": "vod03",
+        "name": "Smirnoff Red",
+        "description": "",
+        "price": "4.90"
+      },
+      {
+        "id": "vod04",
+        "name": "Belvedere",
+        "description": "",
+        "price": "7.90"
+      },
+      {
+        "id": "vod05",
+        "name": "Grey Goose",
+        "description": "",
+        "price": "9.90"
+      },
+      {
+        "id": "vod06",
+        "name": "Spanisch Vodka",
+        "description": "",
+        "price": "6.90"
+      }
+    ]
+  },
+  "liqueurs": {
+    "title": "Liqueurs",
+    "items": [
+      {
+        "id": "liq01",
+        "name": "Sambuca Molinari",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq02",
+        "name": "Aperol",
+        "description": "5cl",
+        "price": "5.90"
+      },
+      {
+        "id": "liq03",
+        "name": "Campari",
+        "description": "5cl",
+        "price": "5.90"
+      },
+      {
+        "id": "liq04",
+        "name": "Averna",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq05",
+        "name": "Ramazzotti",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq06",
+        "name": "Berliner Luft",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq07",
+        "name": "Baileys",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq08",
+        "name": "Licor 43",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq09",
+        "name": "Jägermeister",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq10",
+        "name": "Amaretto",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq11",
+        "name": "Batida de Coco",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq12",
+        "name": "Malibu",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq13",
+        "name": "Galliano",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq14",
+        "name": "Southern Comfort",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq15",
+        "name": "Dry Tunnel",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq16",
+        "name": "Liqueur Beiro",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq17",
+        "name": "Patxarana",
+        "description": "2cl",
+        "price": "4.90"
+      },
+      {
+        "id": "liq18",
+        "name": "Martini Bianco",
+        "description": "5cl",
+        "price": "5.90"
+      },
+      {
+        "id": "liq19",
+        "name": "Martini Rosso",
+        "description": "5cl",
+        "price": "5.90"
+      },
+      {
+        "id": "liq20",
+        "name": "Martini Dry",
+        "description": "5cl",
+        "price": "5.90"
       }
     ]
   }
