@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { MdRestaurant, MdLocalBar, MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { MdRestaurant, MdLocalBar } from "react-icons/md";
 
 const Menu = () => {
   const [activeTab, setActiveTab] = useState("food"); // "food" or "drinks"
@@ -9,10 +9,6 @@ const Menu = () => {
   const [drinksData, setDrinksData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(false);
-
-  const scrollContainerRef = useRef(null);
 
   // Fetch JSON data from public folder
   useEffect(() => {
@@ -45,42 +41,6 @@ const Menu = () => {
 
     fetchMenuData();
   }, []);
-
-  // Check scroll position to show/hide arrows
-  const checkScrollPosition = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setShowLeftArrow(scrollLeft > 0);
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
-
-  // Scroll categories
-  const scroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 300;
-      const newScrollLeft =
-        scrollContainerRef.current.scrollLeft + (direction === "left" ? -scrollAmount : scrollAmount);
-      scrollContainerRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  // Check scroll position on mount and when categories change
-  useEffect(() => {
-    checkScrollPosition();
-    const container = scrollContainerRef.current;
-    if (container) {
-      container.addEventListener("scroll", checkScrollPosition);
-      window.addEventListener("resize", checkScrollPosition);
-      return () => {
-        container.removeEventListener("scroll", checkScrollPosition);
-        window.removeEventListener("resize", checkScrollPosition);
-      };
-    }
-  }, [activeTab]);
 
   const foodCategories = [
     { id: "all", name: "Alles" },
@@ -201,56 +161,41 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Category Filter - STICKY (Below Tabs) - WITH ARROW BUTTONS */}
+        {/* Category Filter - STICKY - MULTI-ROW FOR DESKTOP, SCROLLABLE FOR MOBILE */}
         <div className="sticky top-[88px] bg-[#134e4a] shadow-md z-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="relative">
-              {/* Left Arrow Button */}
-              {showLeftArrow && (
+            {/* Mobile: Horizontal Scroll */}
+            <div className="flex md:hidden overflow-x-auto gap-2 pb-2 scrollbar-hide">
+              {currentCategories.map((category) => (
                 <button
-                  onClick={() => scroll("left")}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#0f3a36] hover:bg-[#feaa3f] text-white p-2 rounded-full shadow-lg transition-all duration-300"
-                  aria-label="Scroll left"
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 transform hover:scale-105 flex-shrink-0 ${
+                    activeCategory === category.id
+                      ? "bg-[#feaa3f] text-white shadow-lg scale-105"
+                      : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
+                  }`}
                 >
-                  <MdChevronLeft className="text-2xl" />
+                  {category.name}
                 </button>
-              )}
+              ))}
+            </div>
 
-              {/* Scrollable Categories */}
-              <div
-                ref={scrollContainerRef}
-                className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide scroll-smooth px-10"
-                style={{
-                  scrollbarWidth: "none",
-                  msOverflowStyle: "none",
-                  WebkitOverflowScrolling: "touch",
-                }}
-              >
-                {currentCategories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 transform hover:scale-105 flex-shrink-0 ${
-                      activeCategory === category.id
-                        ? "bg-[#feaa3f] text-white shadow-lg scale-105"
-                        : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
-                    }`}
-                  >
-                    {category.name}
-                  </button>
-                ))}
-              </div>
-
-              {/* Right Arrow Button */}
-              {showRightArrow && (
+            {/* Desktop: Multi-row Grid */}
+            <div className="hidden lg:flex flex-wrap gap-2 justify-center">
+              {currentCategories.map((category) => (
                 <button
-                  onClick={() => scroll("right")}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#0f3a36] hover:bg-[#feaa3f] text-white p-2 rounded-full shadow-lg transition-all duration-300"
-                  aria-label="Scroll right"
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 transform hover:scale-105 ${
+                    activeCategory === category.id
+                      ? "bg-[#feaa3f] text-white shadow-lg scale-105"
+                      : "bg-white/10 text-gray-200 hover:bg-[#fbbf24] hover:text-white border border-white/20"
+                  }`}
                 >
-                  <MdChevronRight className="text-2xl" />
+                  {category.name}
                 </button>
-              )}
+              ))}
             </div>
           </div>
         </div>
@@ -284,7 +229,7 @@ const Menu = () => {
         </div>
       </div>
 
-      {/* Hide scrollbar CSS */}
+      {/* Hide scrollbar CSS for mobile */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
