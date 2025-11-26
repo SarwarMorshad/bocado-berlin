@@ -106,8 +106,14 @@ const StructuredData = () => {
       />
       <meta property="og:url" content="https://bocadoberlin.de" />
       <meta property="og:image" content="https://bocadoberlin.de/og-image.jpg" />
+      <meta property="og:image:secure_url" content="https://bocadoberlin.de/og-image.jpg" />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta
+        property="og:image:alt"
+        content="BOCADO Berlin - Authentisches spanisches Restaurant und Tapas Bar"
+      />
       <meta property="og:locale" content="de_DE" />
       <meta property="og:site_name" content="BOCADO Berlin" />
 
