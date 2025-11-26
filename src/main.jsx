@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./Routes/Router.jsx";
 import BocadoLoader from "./components/BocadoLoader.jsx";
 import { Toaster } from "react-hot-toast"; // ADD THIS
+import StructuredData from "./components/StructuredData.jsx";
 
 export function Root() {
   const [loading, setLoading] = useState(true);
@@ -20,6 +21,7 @@ export function Root() {
       {loading && <BocadoLoader onComplete={handleLoadComplete} />}
       {!loading && (
         <HelmetProvider>
+          <StructuredData></StructuredData>
           <RouterProvider router={router} />
         </HelmetProvider>
       )}
