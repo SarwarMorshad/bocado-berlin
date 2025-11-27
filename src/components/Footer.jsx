@@ -9,30 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">BOCADO</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary">BOCADO</h3>
             <p className="text-gray-300 mb-4">
               Genießen Sie die feinsten kulinarischen Köstlichkeiten mit frischen Zutaten und authentischen
               Aromen. Wir servieren Glück auf jedem Teller.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61580057680833"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
-              >
-                <FaFacebookF className="h-5 w-5" />
-              </a>
-
-              <a
-                href="https://www.instagram.com/bocado.berlin?igsh=emZlN2cxcDYwY244"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
-              >
-                <FaInstagram className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -108,23 +89,26 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-300 mb-4">
-              Abonnieren Sie, um exklusive Angebote und Neuigkeiten zu erhalten.
-            </p>
-            <form className="space-y-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#feaa3f] transition-colors duration-200"
-              />
-              <button
-                type="submit"
-                className="w-full bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+            <h3 className="text-xl font-semibold mb-4">Folgen Sie uns</h3>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61580057680833"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
               >
-                Subscribe
-              </button>
-            </form>
+                <FaFacebookF className="h-5 w-5" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/bocado.berlin?igsh=emZlN2cxcDYwY244"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] p-2 rounded-full transition-colors duration-200"
+              >
+                <FaInstagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
 
