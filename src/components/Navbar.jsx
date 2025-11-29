@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { gsap } from "gsap";
+import { TbTableShare } from "react-icons/tb";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,7 +94,12 @@ const Navbar = () => {
               to="/reservation"
               className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Tisch Reservieren
+              <div className="flex items-center gap-2 justify-center">
+                <span>
+                  <TbTableShare />
+                </span>
+                Tisch Reservieren
+              </div>
             </Link>
           </div>
 
@@ -153,7 +159,12 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[navLinks.length] = el)}
               className="block mx-3 mt-4 bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-semibold text-center transition-colors duration-200"
             >
-              Tisch Reservieren
+              <div className="flex items-center gap-2 justify-center">
+                <span>
+                  <TbTableShare />
+                </span>
+                Tisch Reservieren
+              </div>
             </Link>
           </div>
         </div>
