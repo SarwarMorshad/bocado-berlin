@@ -95,9 +95,9 @@ const Navbar = () => {
               className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center gap-2 justify-center">
-                <span>
+                {/* <span>
                   <TbTableShare />
-                </span>
+                </span> */}
                 Tisch Reservieren
               </div>
             </Link>
