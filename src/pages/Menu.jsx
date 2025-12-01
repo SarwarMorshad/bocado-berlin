@@ -126,8 +126,8 @@ const Menu = () => {
         <div className="bg-gradient-to-b from-[#134e4a] to-[#0f3a36] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
             <h1 className="text-5xl font-bold mb-4">Menú</h1>
-            <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
-            <p className="text-3xl mt-2 text-[#feaa3f]">Especial de gran inauguración</p>
+            {/* <p className="text-xl text-gray-200">Restaurant · Tapasbar</p>
+            <p className="text-3xl mt-2 text-[#feaa3f]">Especial de gran inauguración</p> */}
           </div>
         </div>
 
