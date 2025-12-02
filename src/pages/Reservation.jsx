@@ -141,7 +141,7 @@ const Reservation = () => {
                 <MdCalendarToday className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Täglich Geöffnet</h3>
-              <p className="text-gray-200 text-sm">11:00 - 23:00 Uhr</p>
+              <p className="text-gray-200 text-sm">12:00 - 22:00 Uhr</p>
               <p className="text-gray-200 text-sm">Jeden Tag</p>
             </div>
 
@@ -287,7 +287,7 @@ const Reservation = () => {
                       calendarClassName="custom-datepicker"
                       wrapperClassName="w-full"
                     />
-                    <p className="text-primary text-xs mt-2">Öffnungszeiten: 11:00 - 23:00 Uhr</p>
+                    <p className="text-primary text-xs mt-2">Öffnungszeiten: 12:00 - 22:00 Uhr</p>
                   </div>
 
                   <div>
@@ -434,7 +434,7 @@ const Reservation = () => {
                 >
                   📞 +49 30 47036642
                 </a>
-                <p className="text-gray-300 text-sm">Öffnungszeiten: 11:00-23:00 Uhr, Täglich</p>
+                <p className="text-gray-300 text-sm">Öffnungszeiten: 12:00-22:00 Uhr, Täglich</p>
               </div>
             </div>
 
