@@ -10,9 +10,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Startseite", path: "/" },
-    { name: "Speisekarte", path: "/menu" },
     { name: "Über uns", path: "/about" },
     { name: "Kontakt", path: "/contact" },
+    { name: "Speisekarte", path: "/menu" },
   ];
 
   const toggleMenu = () => {

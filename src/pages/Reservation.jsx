@@ -281,8 +281,8 @@ const Reservation = () => {
                       placeholderText="Uhrzeit auswählen"
                       required
                       disabled={isSubmitting}
-                      minTime={new Date().setHours(11, 0, 0, 0)}
-                      maxTime={new Date().setHours(23, 0, 0, 0)}
+                      minTime={new Date().setHours(12, 0, 0, 0)}
+                      maxTime={new Date().setHours(22, 0, 0, 0)}
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#feaa3f] transition-colors disabled:opacity-50"
                       calendarClassName="custom-datepicker"
                       wrapperClassName="w-full"
