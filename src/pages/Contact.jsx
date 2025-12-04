@@ -92,17 +92,42 @@ const Contact = () => {
               </div>
 
               {/* Email */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
-                  <MdEmail className="h-8 w-8 text-white" />
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 hover:bg-white/15 hover:border-[#feaa3f]/50 hover:shadow-xl transition-all duration-300">
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">
+                    <MdEmail className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">Email</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <a
-                  href="mailto:bocadoberlin@gmail.com"
-                  className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm break-all"
-                >
-                  bocadoberlin@gmail.com
-                </a>
+
+                {/* Two Email Sections */}
+                <div className="space-y-4">
+                  {/* General Email */}
+                  <div className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-[#feaa3f]/30 transition-all group">
+                    <p className="text-xs font-medium text-[#feaa3f] mb-2 uppercase tracking-wide">
+                      Allgemeine Anfragen
+                    </p>
+                    <a
+                      href="mailto:bocadoberlin@gmail.com"
+                      className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm break-all block group-hover:translate-x-1 transition-transform"
+                    >
+                      bocadoberlin@gmail.com
+                    </a>
+                  </div>
+
+                  {/* Reservations Email */}
+                  <div className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-[#feaa3f]/30 transition-all group">
+                    <p className="text-xs font-medium text-[#feaa3f] mb-2 uppercase tracking-wide">
+                      Reservierungen
+                    </p>
+                    <a
+                      href="mailto:reservations@bocadoberlin.de"
+                      className="text-gray-200 hover:text-[#feaa3f] transition-colors text-sm break-all block group-hover:translate-x-1 transition-transform"
+                    >
+                      reservations@bocadoberlin.de
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {/* Hours */}

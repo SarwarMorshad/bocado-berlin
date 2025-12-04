@@ -434,7 +434,7 @@ const Reservation = () => {
                 >
                   📞 +49 30 47036642
                 </a>
-                <p className="text-gray-300 text-sm">Öffnungszeiten: 12:00-22:00 Uhr, Täglich</p>
+                <p className="text-primary text-sm">Öffnungszeiten: 12:00 - 22:00 Uhr, Täglich</p>
               </div>
             </div>
 
