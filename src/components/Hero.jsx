@@ -89,13 +89,13 @@ const Hero = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
                   <Link
                     to={slide.cta1.link}
-                    className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto"
+                    className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-8 py-3.5 rounded-xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto"
                   >
                     {slide.cta1.text}
                   </Link>
                   <Link
                     to={slide.cta2.link}
-                    className="border-2 border-white hover:bg-[#fbbf24] hover:border-[#fbbf24] hover:text-white text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 w-full sm:w-auto"
+                    className="border-2 border-white hover:bg-[#fbbf24] hover:border-[#fbbf24] hover:text-white text-white px-8 py-3.5 rounded-xl font-semibold text-lg transition-all duration-200 w-full sm:w-auto"
                   >
                     {slide.cta2.text}
                   </Link>

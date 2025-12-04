@@ -66,7 +66,7 @@ const Contact = () => {
         {/* Contact Info Cards */}
         <section className="py-16 bg-[#134e4a]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
               {/* Location */}
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center hover:bg-white/15 transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-[#feaa3f] rounded-full mb-4">

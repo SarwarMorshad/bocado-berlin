@@ -88,6 +88,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <a
+                  href="https://consumer.vectron.cloud/sites/7e568f4a-e8c1-4e45-b39c-08dccb017cc7/online-ordering"
+                  className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200 flex items-center group"
+                >
+                  <span className="mr-2 text-[#feaa3f] group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                  Online Bestellen
+                </a>
+              </li>
+              <li>
                 <Link
                   to="/reservation"
                   className="text-gray-300 hover:text-[#feaa3f] transition-colors duration-200 flex items-center group"

@@ -252,7 +252,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/menu"
-                className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-8 py-3.5 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+                className="bg-[#feaa3f] hover:bg-[#fbbf24] text-white px-8 py-3.5 rounded-xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Unsere Speisekarte
               </Link>
