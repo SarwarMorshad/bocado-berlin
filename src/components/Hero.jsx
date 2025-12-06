@@ -26,7 +26,10 @@ const Hero = () => {
       image: "https://i.postimg.cc/DZM2gWFt/hero-2.jpg", // Replace with your image path
       gradient: "from-[#0f3a36] via-[#134e4a] to-[#0f3a36]",
       cta1: { text: "Einen Tisch Buchen", link: "/reservation" },
-      cta2: { text: "Gerichte entdecken", link: "/menu" },
+      cta2: {
+        text: "Online Bestellen",
+        link: "https://consumer.vectron.cloud/sites/7e568f4a-e8c1-4e45-b39c-08dccb017cc7/online-ordering",
+      },
     },
     {
       id: 3,
